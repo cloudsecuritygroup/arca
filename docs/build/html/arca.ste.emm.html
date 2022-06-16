@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>arca.ste.emm package &mdash; Arca 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_paramlinks.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="arca.ste.hash_functions package" href="arca.ste.hash_functions.html" />
+    <link rel="prev" title="arca.ste.edx package" href="arca.ste.edx.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Arca
+          </a>
+              <div class="version">
+                Version 0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">arca</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="arca.html">arca package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="arca.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="arca.arq.html">arca.arq package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="arca.ste.html">arca.ste package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arca.util.html">arca.util package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arca.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arca.html#arca-crypto-module">arca.crypto module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arca.html#module-arca">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Arca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">arca</a> &raquo;</li>
+          <li><a href="arca.html">arca package</a> &raquo;</li>
+          <li><a href="arca.ste.html">arca.ste package</a> &raquo;</li>
+      <li>arca.ste.emm package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/arca.ste.emm.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="arca-ste-emm-package">
+<h1>arca.ste.emm package<a class="headerlink" href="#arca-ste-emm-package" title="Permalink to this headline"></a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="arca-ste-emm-emm-module">
+<h2>arca.ste.emm.emm module<a class="headerlink" href="#arca-ste-emm-emm-module" title="Permalink to this headline"></a></h2>
+<span class="target" id="module-arca.ste.emm.emm"></span><dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.emm.emm.EMM">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EMM</span></span><a class="headerlink" href="#arca.ste.emm.emm.EMM" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="arca.ste.html#arca.ste.eds.EDS" title="arca.ste.eds.EDS"><code class="xref py py-class docutils literal notranslate"><span class="pre">arca.ste.eds.EDS</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.emm.KeyType</span></code>, <a class="reference internal" href="#arca.ste.emm.multimap.Multimap" title="arca.ste.emm.multimap.Multimap"><code class="xref py py-class docutils literal notranslate"><span class="pre">arca.ste.emm.multimap.Multimap</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.emm.MMKeyType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.emm.MMValueType</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.emm.EdsType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.emm.MMKeyType</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.emm.MMValueType</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.emm.KeyType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.emm.EdsType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.emm.MMKeyType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.emm.MMValueType</span></code>]</p>
+<p>An interface representing an encrypted multimap scheme.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.emm.EMM.generate_key">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">generate_key</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">arca.ste.emm.emm.KeyType</span></span></span><a class="headerlink" href="#arca.ste.emm.emm.EMM.generate_key" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a key for the encrypted multimap scheme.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a key</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.emm.EMM.encrypt">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.emm.KeyType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plaintext_mm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arca.ste.emm.multimap.Multimap" title="arca.ste.emm.multimap.Multimap"><span class="pre">Multimap</span></a><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.emm.MMKeyType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arca.ste.emm.emm.MMValueType</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.emm.emm.EMM.encrypt" title="Permalink to this definition"></a></dt>
+<dd><p>Encrypts the given plaintext multimap with the given key
+and returns a byte string representing the encrypted multimap.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.emm.EMM.encrypt.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.emm.EMM.encrypt.params.key">¶</a> – the key to encrypt with, as generated from <a class="reference internal" href="#arca.ste.emm.emm.EMM.generate_key" title="arca.ste.emm.emm.EMM.generate_key"><code class="xref py py-func docutils literal notranslate"><span class="pre">generate_key()</span></code></a></p></li>
+<li><p><span class="target" id="arca.ste.emm.emm.EMM.encrypt.params.plaintext_mm"></span><strong>plaintext_mm</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.emm.EMM.encrypt.params.plaintext_mm">¶</a> – the plaintext <code class="xref py py-class docutils literal notranslate"><span class="pre">Multimap</span></code> to encrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a serialized encrypted multimap</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.emm.EMM.load_eds">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_eds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eds_bytes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">arca.ste.emm.emm.EdsType</span></span></span><a class="headerlink" href="#arca.ste.emm.emm.EMM.load_eds" title="Permalink to this definition"></a></dt>
+<dd><p>Deserializes a byte string representing an encrypted multimap
+into the type needed by the <a class="reference internal" href="#arca.ste.emm.emm.EMM.query" title="arca.ste.emm.emm.EMM.query"><code class="xref py py-func docutils literal notranslate"><span class="pre">query()</span></code></a> algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.emm.emm.EMM.load_eds.params.eds_bytes"></span><strong>eds_bytes</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.emm.EMM.load_eds.params.eds_bytes">¶</a> – a serialized encrypted multimap from <a class="reference internal" href="#arca.ste.emm.emm.EMM.encrypt" title="arca.ste.emm.emm.EMM.encrypt"><code class="xref py py-func docutils literal notranslate"><span class="pre">encrypt()</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a deserialized version of the encrypted multimap</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.emm.EMM.token">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.emm.KeyType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.emm.MMKeyType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.emm.emm.EMM.token" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a search token for the given key and keyword.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.emm.EMM.token.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.emm.EMM.token.params.key">¶</a> – the key to encrypt with</p></li>
+<li><p><span class="target" id="arca.ste.emm.emm.EMM.token.params.keyword"></span><strong>keyword</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.emm.EMM.token.params.keyword">¶</a> – the keyword to query the encrypted multimap with</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a search token</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.emm.EMM.query">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.emm.EdsType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arca.ste.emm.emm.EMM.query" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a result for the given search token queried over the
+given encrypted multimap.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.emm.EMM.query.params.token"></span><strong>token</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.emm.EMM.query.params.token">¶</a> – a search token generated by <a class="reference internal" href="#arca.ste.emm.emm.EMM.token" title="arca.ste.emm.emm.EMM.token"><code class="xref py py-func docutils literal notranslate"><span class="pre">token()</span></code></a></p></li>
+<li><p><span class="target" id="arca.ste.emm.emm.EMM.query.params.eds"></span><strong>eds</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.emm.EMM.query.params.eds">¶</a> – the encrypted data structure from <a class="reference internal" href="#arca.ste.emm.emm.EMM.load_eds" title="arca.ste.emm.emm.EMM.load_eds"><code class="xref py py-func docutils literal notranslate"><span class="pre">load_eds()</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a serialized response to pass to <a class="reference internal" href="#arca.ste.emm.emm.EMM.resolve" title="arca.ste.emm.emm.EMM.resolve"><code class="xref py py-func docutils literal notranslate"><span class="pre">resolve()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.emm.EMM.resolve">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">resolve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.emm.KeyType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.emm.MMValueType</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arca.ste.emm.emm.EMM.resolve" title="Permalink to this definition"></a></dt>
+<dd><p>Resolves the serialized response returned by the server into
+a native List[MMValueType].</p>
+<p>If the encrypted multimap is response-hiding, the given key is
+also used to decrypt the response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.emm.EMM.resolve.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.emm.EMM.resolve.params.key">¶</a> – the key to decrypt with</p></li>
+<li><p><span class="target" id="arca.ste.emm.emm.EMM.resolve.params.response"></span><strong>response</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.emm.EMM.resolve.params.response">¶</a> – the serialized response from <a class="reference internal" href="#arca.ste.emm.emm.EMM.query" title="arca.ste.emm.emm.EMM.query"><code class="xref py py-func docutils literal notranslate"><span class="pre">query()</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a list of plaintext values</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arca-ste-emm-multimap-module">
+<h2>arca.ste.emm.multimap module<a class="headerlink" href="#arca-ste-emm-multimap-module" title="Permalink to this headline"></a></h2>
+<span class="target" id="module-arca.ste.emm.multimap"></span><dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.emm.multimap.Multimap">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Multimap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">multimap:</span> <span class="pre">typing.Dict[arca.ste.emm.multimap.KeyType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">typing.List[arca.ste.emm.multimap.ValueType]]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arca.ste.emm.multimap.Multimap" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.multimap.KeyType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.multimap.ValueType</span></code>]</p>
+<p>A multimap.</p>
+<p>The internal representation of <a class="reference internal" href="#arca.ste.emm.multimap.Multimap" title="arca.ste.emm.multimap.Multimap"><code class="xref py py-class docutils literal notranslate"><span class="pre">Multimap</span></code></a> uses lists, so duplicate
+entries for the same key are permitted.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arca.ste.emm.multimap.Multimap.multimap">
+<span class="sig-name descname"><span class="pre">multimap</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.multimap.KeyType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.multimap.ValueType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#arca.ste.emm.multimap.Multimap.multimap" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.multimap.Multimap.set">
+<span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.multimap.KeyType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.multimap.ValueType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#arca.ste.emm.multimap.Multimap.set" title="Permalink to this definition"></a></dt>
+<dd><p>Adds the given (key, element) pair to the <a class="reference internal" href="#arca.ste.emm.multimap.Multimap" title="arca.ste.emm.multimap.Multimap"><code class="xref py py-class docutils literal notranslate"><span class="pre">Multimap</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.multimap.Multimap.set.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.multimap.Multimap.set.params.key">¶</a> – the key to associate the element with</p></li>
+<li><p><span class="target" id="arca.ste.emm.multimap.Multimap.set.params.element"></span><strong>element</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.multimap.Multimap.set.params.element">¶</a> – the element to add to the Multimap</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.multimap.Multimap.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.multimap.KeyType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.multimap.ValueType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arca.ste.emm.multimap.Multimap.get" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieves all of the elements associated with the given key in
+the <a class="reference internal" href="#arca.ste.emm.multimap.Multimap" title="arca.ste.emm.multimap.Multimap"><code class="xref py py-class docutils literal notranslate"><span class="pre">Multimap</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.emm.multimap.Multimap.get.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.multimap.Multimap.get.params.key">¶</a> – the key to retrieve</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A List of all of the elements associated with the key
+in the <a class="reference internal" href="#arca.ste.emm.multimap.Multimap" title="arca.ste.emm.multimap.Multimap"><code class="xref py py-class docutils literal notranslate"><span class="pre">Multimap</span></code></a>, or <code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code> if no elements are
+associated with the given key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.multimap.Multimap.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.multimap.KeyType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#arca.ste.emm.multimap.Multimap.delete" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes all of the elements associated with the given key in the
+<a class="reference internal" href="#arca.ste.emm.multimap.Multimap" title="arca.ste.emm.multimap.Multimap"><code class="xref py py-class docutils literal notranslate"><span class="pre">Multimap</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.emm.multimap.Multimap.delete.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.multimap.Multimap.delete.params.key">¶</a> – the key to delete</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arca-ste-emm-pi-2lev-emm-module">
+<h2>arca.ste.emm.pi_2lev_emm module<a class="headerlink" href="#arca-ste-emm-pi-2lev-emm-module" title="Permalink to this headline"></a></h2>
+<span class="target" id="module-arca.ste.emm.pi_2lev_emm"></span><dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_2lev_emm.Pi2LevEMM">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Pi2LevEMM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key_length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">16</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#arca.ste.emm.emm.EMM" title="arca.ste.emm.emm.EMM"><code class="xref py py-class docutils literal notranslate"><span class="pre">arca.ste.emm.emm.EMM</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.pi_2lev_emm.MMKeyType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.pi_2lev_emm.MMValueType</span></code>]</p>
+<p>Implements the Pi_2lev scheme from [CJJJKRS14].</p>
+<p>Pi_2lev achieves more reasonable tradeoffs between index size and
+search time than Pi_bas by storing each set of records matching a
+keyword differently according to the size of the set.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.generate_key">
+<span class="sig-name descname"><span class="pre">generate_key</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.generate_key" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a key for the encrypted multimap scheme.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a key</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.encrypt">
+<span class="sig-name descname"><span class="pre">encrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plaintext_mm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arca.ste.emm.multimap.Multimap" title="arca.ste.emm.multimap.Multimap"><span class="pre">Multimap</span></a><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.pi_2lev_emm.MMKeyType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arca.ste.emm.pi_2lev_emm.MMValueType</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.encrypt" title="Permalink to this definition"></a></dt>
+<dd><p>Encrypts the given plaintext multimap with the given key
+and returns a byte string representing the encrypted multimap.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.encrypt.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.encrypt.params.key">¶</a> – the key to encrypt with, as generated from <a class="reference internal" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.generate_key" title="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.generate_key"><code class="xref py py-func docutils literal notranslate"><span class="pre">generate_key()</span></code></a></p></li>
+<li><p><span class="target" id="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.encrypt.params.plaintext_mm"></span><strong>plaintext_mm</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.encrypt.params.plaintext_mm">¶</a> – the plaintext <code class="xref py py-class docutils literal notranslate"><span class="pre">Multimap</span></code> to encrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a serialized encrypted multimap</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.load_eds">
+<span class="sig-name descname"><span class="pre">load_eds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eds_bytes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.load_eds" title="Permalink to this definition"></a></dt>
+<dd><p>Deserializes a byte string representing an encrypted multimap
+into the type needed by the <a class="reference internal" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.query" title="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.query"><code class="xref py py-func docutils literal notranslate"><span class="pre">query()</span></code></a> algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.load_eds.params.eds_bytes"></span><strong>eds_bytes</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.load_eds.params.eds_bytes">¶</a> – a serialized encrypted multimap from <a class="reference internal" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.encrypt" title="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.encrypt"><code class="xref py py-func docutils literal notranslate"><span class="pre">encrypt()</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a deserialized version of the encrypted multimap</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.token">
+<span class="sig-name descname"><span class="pre">token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.pi_2lev_emm.MMKeyType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.token" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a search token for the given key and keyword.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.token.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.token.params.key">¶</a> – the key to encrypt with</p></li>
+<li><p><span class="target" id="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.token.params.keyword"></span><strong>keyword</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.token.params.keyword">¶</a> – the keyword to query the encrypted multimap with</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a search token</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.query">
+<span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.query" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a result for the given search token queried over the
+given encrypted multimap.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.query.params.token"></span><strong>token</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.query.params.token">¶</a> – a search token generated by <a class="reference internal" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.token" title="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.token"><code class="xref py py-func docutils literal notranslate"><span class="pre">token()</span></code></a></p></li>
+<li><p><span class="target" id="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.query.params.eds"></span><strong>eds</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.query.params.eds">¶</a> – the encrypted data structure from <a class="reference internal" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.load_eds" title="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.load_eds"><code class="xref py py-func docutils literal notranslate"><span class="pre">load_eds()</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a serialized response to pass to <a class="reference internal" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.resolve" title="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.resolve"><code class="xref py py-func docutils literal notranslate"><span class="pre">resolve()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.resolve">
+<span class="sig-name descname"><span class="pre">resolve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.pi_2lev_emm.MMValueType</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.resolve" title="Permalink to this definition"></a></dt>
+<dd><p>Resolves the serialized response returned by the server into
+a native List[MMValueType].</p>
+<p>If the encrypted multimap is response-hiding, the given key is
+also used to decrypt the response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.resolve.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.resolve.params.key">¶</a> – the key to decrypt with</p></li>
+<li><p><span class="target" id="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.resolve.params.response"></span><strong>response</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.resolve.params.response">¶</a> – the serialized response from <a class="reference internal" href="#arca.ste.emm.pi_2lev_emm.Pi2LevEMM.query" title="arca.ste.emm.pi_2lev_emm.Pi2LevEMM.query"><code class="xref py py-func docutils literal notranslate"><span class="pre">query()</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a list of plaintext values</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arca-ste-emm-pi-base-emm-module">
+<h2>arca.ste.emm.pi_base_emm module<a class="headerlink" href="#arca-ste-emm-pi-base-emm-module" title="Permalink to this headline"></a></h2>
+<span class="target" id="module-arca.ste.emm.pi_base_emm"></span><dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_base_emm.PiBaseEMMKeyPurpose">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PiBaseEMMKeyPurpose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arca.ste.emm.pi_base_emm.PiBaseEMMKeyPurpose" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></p>
+<p>Internal class denoting the purpose of a key; used to consistently
+derive the same key in operations.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_base_emm.PiBaseEMMKeyPurpose.HMAC">
+<span class="sig-name descname"><span class="pre">HMAC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#arca.ste.emm.pi_base_emm.PiBaseEMMKeyPurpose.HMAC" title="Permalink to this definition"></a></dt>
+<dd><p>Purpose for a key used for HMAC operations.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_base_emm.PiBaseEMMKeyPurpose.ENCRYPT">
+<span class="sig-name descname"><span class="pre">ENCRYPT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#arca.ste.emm.pi_base_emm.PiBaseEMMKeyPurpose.ENCRYPT" title="Permalink to this definition"></a></dt>
+<dd><p>Purpose for a key used for encryption operations.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_base_emm.PiBaseEMM">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PiBaseEMM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mm_key_serializer:</span> <span class="pre">arca.ste.serializers.serializer.Serializer[arca.ste.emm.pi_base_emm.MMKeyType]</span> <span class="pre">=</span> <span class="pre">&lt;arca.ste.serializers.pickle_serializer.PickleSerializer</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mm_value_serializer:</span> <span class="pre">arca.ste.serializers.serializer.Serializer[arca.ste.emm.pi_base_emm.MMValueType]</span> <span class="pre">=</span> <span class="pre">&lt;arca.ste.serializers.pickle_serializer.PickleSerializer</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encryption_scheme:</span> <span class="pre">arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme</span> <span class="pre">=</span> <span class="pre">&lt;arca.ste.symmetric_encryption.simple_symmetric_encryption_scheme.SimpleSymmetricEncryptionScheme</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hashing_scheme:</span> <span class="pre">arca.ste.hash_functions.hash_function_scheme.HashFunctionScheme</span> <span class="pre">=</span> <span class="pre">&lt;arca.ste.hash_functions.simple_hash_function_scheme.SimpleHashFunctionScheme</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key_length:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">16</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arca.ste.emm.pi_base_emm.PiBaseEMM" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#arca.ste.emm.emm.EMM" title="arca.ste.emm.emm.EMM"><code class="xref py py-class docutils literal notranslate"><span class="pre">arca.ste.emm.emm.EMM</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.pi_base_emm.MMKeyType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.pi_base_emm.MMValueType</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.pi_base_emm.MMKeyType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.pi_base_emm.MMValueType</span></code>]</p>
+<p>Implements the Pi_bas scheme from [CJJJKRS14].</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_base_emm.PiBaseEMM.mm_key_serializer">
+<span class="sig-name descname"><span class="pre">mm_key_serializer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="arca.ste.serializers.html#arca.ste.serializers.serializer.Serializer" title="arca.ste.serializers.serializer.Serializer"><span class="pre">Serializer</span></a><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.pi_base_emm.MMKeyType</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.mm_key_serializer" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_base_emm.PiBaseEMM.mm_value_serializer">
+<span class="sig-name descname"><span class="pre">mm_value_serializer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="arca.ste.serializers.html#arca.ste.serializers.serializer.Serializer" title="arca.ste.serializers.serializer.Serializer"><span class="pre">Serializer</span></a><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.pi_base_emm.MMValueType</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.mm_value_serializer" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_base_emm.PiBaseEMM.encryption_scheme">
+<span class="sig-name descname"><span class="pre">encryption_scheme</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="arca.ste.symmetric_encryption.html#arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme" title="arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme"><span class="pre">SymmetricEncryptionScheme</span></a></em><a class="headerlink" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.encryption_scheme" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_base_emm.PiBaseEMM.hashing_scheme">
+<span class="sig-name descname"><span class="pre">hashing_scheme</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="arca.ste.hash_functions.html#arca.ste.hash_functions.hash_function_scheme.HashFunctionScheme" title="arca.ste.hash_functions.hash_function_scheme.HashFunctionScheme"><span class="pre">HashFunctionScheme</span></a></em><a class="headerlink" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.hashing_scheme" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_base_emm.PiBaseEMM.key_length">
+<span class="sig-name descname"><span class="pre">key_length</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.key_length" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_base_emm.PiBaseEMM.generate_key">
+<span class="sig-name descname"><span class="pre">generate_key</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.generate_key" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a key for the encrypted multimap scheme.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a key</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_base_emm.PiBaseEMM.encrypt">
+<span class="sig-name descname"><span class="pre">encrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plaintext_mm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arca.ste.emm.multimap.Multimap" title="arca.ste.emm.multimap.Multimap"><span class="pre">Multimap</span></a><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.pi_base_emm.MMKeyType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arca.ste.emm.pi_base_emm.MMValueType</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.encrypt" title="Permalink to this definition"></a></dt>
+<dd><p>Encrypts the given plaintext multimap with the given key
+and returns a byte string representing the encrypted multimap.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.pi_base_emm.PiBaseEMM.encrypt.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.encrypt.params.key">¶</a> – the key to encrypt with, as generated from <a class="reference internal" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.generate_key" title="arca.ste.emm.pi_base_emm.PiBaseEMM.generate_key"><code class="xref py py-func docutils literal notranslate"><span class="pre">generate_key()</span></code></a></p></li>
+<li><p><span class="target" id="arca.ste.emm.pi_base_emm.PiBaseEMM.encrypt.params.plaintext_mm"></span><strong>plaintext_mm</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.encrypt.params.plaintext_mm">¶</a> – the plaintext <code class="xref py py-class docutils literal notranslate"><span class="pre">Multimap</span></code> to encrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a serialized encrypted multimap</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_base_emm.PiBaseEMM.load_eds">
+<span class="sig-name descname"><span class="pre">load_eds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eds_bytes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.load_eds" title="Permalink to this definition"></a></dt>
+<dd><p>Deserializes a byte string representing an encrypted multimap
+into the type needed by the <a class="reference internal" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.query" title="arca.ste.emm.pi_base_emm.PiBaseEMM.query"><code class="xref py py-func docutils literal notranslate"><span class="pre">query()</span></code></a> algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.emm.pi_base_emm.PiBaseEMM.load_eds.params.eds_bytes"></span><strong>eds_bytes</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.load_eds.params.eds_bytes">¶</a> – a serialized encrypted multimap from <a class="reference internal" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.encrypt" title="arca.ste.emm.pi_base_emm.PiBaseEMM.encrypt"><code class="xref py py-func docutils literal notranslate"><span class="pre">encrypt()</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a deserialized version of the encrypted multimap</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_base_emm.PiBaseEMM.token">
+<span class="sig-name descname"><span class="pre">token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.pi_base_emm.MMKeyType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.token" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a search token for the given key and keyword.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.pi_base_emm.PiBaseEMM.token.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.token.params.key">¶</a> – the key to encrypt with</p></li>
+<li><p><span class="target" id="arca.ste.emm.pi_base_emm.PiBaseEMM.token.params.keyword"></span><strong>keyword</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.token.params.keyword">¶</a> – the keyword to query the encrypted multimap with</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a search token</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_base_emm.PiBaseEMM.query">
+<span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.query" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a result for the given search token queried over the
+given encrypted multimap.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.pi_base_emm.PiBaseEMM.query.params.token"></span><strong>token</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.query.params.token">¶</a> – a search token generated by <a class="reference internal" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.token" title="arca.ste.emm.pi_base_emm.PiBaseEMM.token"><code class="xref py py-func docutils literal notranslate"><span class="pre">token()</span></code></a></p></li>
+<li><p><span class="target" id="arca.ste.emm.pi_base_emm.PiBaseEMM.query.params.eds"></span><strong>eds</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.query.params.eds">¶</a> – the encrypted data structure from <a class="reference internal" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.load_eds" title="arca.ste.emm.pi_base_emm.PiBaseEMM.load_eds"><code class="xref py py-func docutils literal notranslate"><span class="pre">load_eds()</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a serialized response to pass to <a class="reference internal" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.resolve" title="arca.ste.emm.pi_base_emm.PiBaseEMM.resolve"><code class="xref py py-func docutils literal notranslate"><span class="pre">resolve()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.pi_base_emm.PiBaseEMM.resolve">
+<span class="sig-name descname"><span class="pre">resolve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.pi_base_emm.MMValueType</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.resolve" title="Permalink to this definition"></a></dt>
+<dd><p>Resolves the serialized response returned by the server into
+a native List[MMValueType].</p>
+<p>If the encrypted multimap is response-hiding, the given key is
+also used to decrypt the response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.pi_base_emm.PiBaseEMM.resolve.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.resolve.params.key">¶</a> – the key to decrypt with</p></li>
+<li><p><span class="target" id="arca.ste.emm.pi_base_emm.PiBaseEMM.resolve.params.response"></span><strong>response</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.resolve.params.response">¶</a> – the serialized response from <a class="reference internal" href="#arca.ste.emm.pi_base_emm.PiBaseEMM.query" title="arca.ste.emm.pi_base_emm.PiBaseEMM.query"><code class="xref py py-func docutils literal notranslate"><span class="pre">query()</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a list of plaintext values</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-arca.ste.emm">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-arca.ste.emm" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.emm.Multimap">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Multimap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">multimap:</span> <span class="pre">typing.Dict[arca.ste.emm.multimap.KeyType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">typing.List[arca.ste.emm.multimap.ValueType]]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arca.ste.emm.Multimap" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.multimap.KeyType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.multimap.ValueType</span></code>]</p>
+<p>A multimap.</p>
+<p>The internal representation of <a class="reference internal" href="#arca.ste.emm.Multimap" title="arca.ste.emm.Multimap"><code class="xref py py-class docutils literal notranslate"><span class="pre">Multimap</span></code></a> uses lists, so duplicate
+entries for the same key are permitted.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arca.ste.emm.Multimap.multimap">
+<span class="sig-name descname"><span class="pre">multimap</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.multimap.KeyType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.multimap.ValueType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#arca.ste.emm.Multimap.multimap" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.Multimap.set">
+<span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.multimap.KeyType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.multimap.ValueType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#arca.ste.emm.Multimap.set" title="Permalink to this definition"></a></dt>
+<dd><p>Adds the given (key, element) pair to the <a class="reference internal" href="#arca.ste.emm.Multimap" title="arca.ste.emm.Multimap"><code class="xref py py-class docutils literal notranslate"><span class="pre">Multimap</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.Multimap.set.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.Multimap.set.params.key">¶</a> – the key to associate the element with</p></li>
+<li><p><span class="target" id="arca.ste.emm.Multimap.set.params.element"></span><strong>element</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.Multimap.set.params.element">¶</a> – the element to add to the Multimap</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.Multimap.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.multimap.KeyType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.multimap.ValueType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arca.ste.emm.Multimap.get" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieves all of the elements associated with the given key in
+the <a class="reference internal" href="#arca.ste.emm.Multimap" title="arca.ste.emm.Multimap"><code class="xref py py-class docutils literal notranslate"><span class="pre">Multimap</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.emm.Multimap.get.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.Multimap.get.params.key">¶</a> – the key to retrieve</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A List of all of the elements associated with the key
+in the <a class="reference internal" href="#arca.ste.emm.Multimap" title="arca.ste.emm.Multimap"><code class="xref py py-class docutils literal notranslate"><span class="pre">Multimap</span></code></a>, or <code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code> if no elements are
+associated with the given key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.Multimap.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.multimap.KeyType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#arca.ste.emm.Multimap.delete" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes all of the elements associated with the given key in the
+<a class="reference internal" href="#arca.ste.emm.Multimap" title="arca.ste.emm.Multimap"><code class="xref py py-class docutils literal notranslate"><span class="pre">Multimap</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.emm.Multimap.delete.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.Multimap.delete.params.key">¶</a> – the key to delete</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.emm.EMM">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EMM</span></span><a class="headerlink" href="#arca.ste.emm.EMM" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="arca.ste.html#arca.ste.eds.EDS" title="arca.ste.eds.EDS"><code class="xref py py-class docutils literal notranslate"><span class="pre">arca.ste.eds.EDS</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.emm.KeyType</span></code>, <a class="reference internal" href="#arca.ste.emm.multimap.Multimap" title="arca.ste.emm.multimap.Multimap"><code class="xref py py-class docutils literal notranslate"><span class="pre">arca.ste.emm.multimap.Multimap</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.emm.MMKeyType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.emm.MMValueType</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.emm.EdsType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.emm.MMKeyType</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.emm.MMValueType</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.emm.KeyType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.emm.EdsType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.emm.MMKeyType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.emm.MMValueType</span></code>]</p>
+<p>An interface representing an encrypted multimap scheme.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.EMM.generate_key">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">generate_key</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">arca.ste.emm.emm.KeyType</span></span></span><a class="headerlink" href="#arca.ste.emm.EMM.generate_key" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a key for the encrypted multimap scheme.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a key</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.EMM.encrypt">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.emm.KeyType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plaintext_mm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arca.ste.emm.multimap.Multimap" title="arca.ste.emm.multimap.Multimap"><span class="pre">Multimap</span></a><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.emm.MMKeyType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arca.ste.emm.emm.MMValueType</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.emm.EMM.encrypt" title="Permalink to this definition"></a></dt>
+<dd><p>Encrypts the given plaintext multimap with the given key
+and returns a byte string representing the encrypted multimap.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.EMM.encrypt.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.EMM.encrypt.params.key">¶</a> – the key to encrypt with, as generated from <a class="reference internal" href="#arca.ste.emm.EMM.generate_key" title="arca.ste.emm.EMM.generate_key"><code class="xref py py-func docutils literal notranslate"><span class="pre">generate_key()</span></code></a></p></li>
+<li><p><span class="target" id="arca.ste.emm.EMM.encrypt.params.plaintext_mm"></span><strong>plaintext_mm</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.EMM.encrypt.params.plaintext_mm">¶</a> – the plaintext <a class="reference internal" href="#arca.ste.emm.Multimap" title="arca.ste.emm.Multimap"><code class="xref py py-class docutils literal notranslate"><span class="pre">Multimap</span></code></a> to encrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a serialized encrypted multimap</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.EMM.load_eds">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_eds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eds_bytes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">arca.ste.emm.emm.EdsType</span></span></span><a class="headerlink" href="#arca.ste.emm.EMM.load_eds" title="Permalink to this definition"></a></dt>
+<dd><p>Deserializes a byte string representing an encrypted multimap
+into the type needed by the <a class="reference internal" href="#arca.ste.emm.EMM.query" title="arca.ste.emm.EMM.query"><code class="xref py py-func docutils literal notranslate"><span class="pre">query()</span></code></a> algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.emm.EMM.load_eds.params.eds_bytes"></span><strong>eds_bytes</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.EMM.load_eds.params.eds_bytes">¶</a> – a serialized encrypted multimap from <a class="reference internal" href="#arca.ste.emm.EMM.encrypt" title="arca.ste.emm.EMM.encrypt"><code class="xref py py-func docutils literal notranslate"><span class="pre">encrypt()</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a deserialized version of the encrypted multimap</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.EMM.token">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.emm.KeyType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.emm.MMKeyType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.emm.EMM.token" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a search token for the given key and keyword.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.EMM.token.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.EMM.token.params.key">¶</a> – the key to encrypt with</p></li>
+<li><p><span class="target" id="arca.ste.emm.EMM.token.params.keyword"></span><strong>keyword</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.EMM.token.params.keyword">¶</a> – the keyword to query the encrypted multimap with</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a search token</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.EMM.query">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.emm.EdsType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arca.ste.emm.EMM.query" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a result for the given search token queried over the
+given encrypted multimap.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.EMM.query.params.token"></span><strong>token</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.EMM.query.params.token">¶</a> – a search token generated by <a class="reference internal" href="#arca.ste.emm.EMM.token" title="arca.ste.emm.EMM.token"><code class="xref py py-func docutils literal notranslate"><span class="pre">token()</span></code></a></p></li>
+<li><p><span class="target" id="arca.ste.emm.EMM.query.params.eds"></span><strong>eds</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.EMM.query.params.eds">¶</a> – the encrypted data structure from <a class="reference internal" href="#arca.ste.emm.EMM.load_eds" title="arca.ste.emm.EMM.load_eds"><code class="xref py py-func docutils literal notranslate"><span class="pre">load_eds()</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a serialized response to pass to <a class="reference internal" href="#arca.ste.emm.EMM.resolve" title="arca.ste.emm.EMM.resolve"><code class="xref py py-func docutils literal notranslate"><span class="pre">resolve()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.EMM.resolve">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">resolve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.emm.KeyType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.emm.MMValueType</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arca.ste.emm.EMM.resolve" title="Permalink to this definition"></a></dt>
+<dd><p>Resolves the serialized response returned by the server into
+a native List[MMValueType].</p>
+<p>If the encrypted multimap is response-hiding, the given key is
+also used to decrypt the response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.EMM.resolve.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.EMM.resolve.params.key">¶</a> – the key to decrypt with</p></li>
+<li><p><span class="target" id="arca.ste.emm.EMM.resolve.params.response"></span><strong>response</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.EMM.resolve.params.response">¶</a> – the serialized response from <a class="reference internal" href="#arca.ste.emm.EMM.query" title="arca.ste.emm.EMM.query"><code class="xref py py-func docutils literal notranslate"><span class="pre">query()</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a list of plaintext values</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.emm.PiBaseEMM">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PiBaseEMM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mm_key_serializer:</span> <span class="pre">arca.ste.serializers.serializer.Serializer[arca.ste.emm.pi_base_emm.MMKeyType]</span> <span class="pre">=</span> <span class="pre">&lt;arca.ste.serializers.pickle_serializer.PickleSerializer</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mm_value_serializer:</span> <span class="pre">arca.ste.serializers.serializer.Serializer[arca.ste.emm.pi_base_emm.MMValueType]</span> <span class="pre">=</span> <span class="pre">&lt;arca.ste.serializers.pickle_serializer.PickleSerializer</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encryption_scheme:</span> <span class="pre">arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme</span> <span class="pre">=</span> <span class="pre">&lt;arca.ste.symmetric_encryption.simple_symmetric_encryption_scheme.SimpleSymmetricEncryptionScheme</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hashing_scheme:</span> <span class="pre">arca.ste.hash_functions.hash_function_scheme.HashFunctionScheme</span> <span class="pre">=</span> <span class="pre">&lt;arca.ste.hash_functions.simple_hash_function_scheme.SimpleHashFunctionScheme</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key_length:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">16</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arca.ste.emm.PiBaseEMM" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#arca.ste.emm.emm.EMM" title="arca.ste.emm.emm.EMM"><code class="xref py py-class docutils literal notranslate"><span class="pre">arca.ste.emm.emm.EMM</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.pi_base_emm.MMKeyType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.pi_base_emm.MMValueType</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.pi_base_emm.MMKeyType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.pi_base_emm.MMValueType</span></code>]</p>
+<p>Implements the Pi_bas scheme from [CJJJKRS14].</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arca.ste.emm.PiBaseEMM.mm_key_serializer">
+<span class="sig-name descname"><span class="pre">mm_key_serializer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="arca.ste.serializers.html#arca.ste.serializers.serializer.Serializer" title="arca.ste.serializers.serializer.Serializer"><span class="pre">Serializer</span></a><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.pi_base_emm.MMKeyType</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#arca.ste.emm.PiBaseEMM.mm_key_serializer" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arca.ste.emm.PiBaseEMM.mm_value_serializer">
+<span class="sig-name descname"><span class="pre">mm_value_serializer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="arca.ste.serializers.html#arca.ste.serializers.serializer.Serializer" title="arca.ste.serializers.serializer.Serializer"><span class="pre">Serializer</span></a><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.pi_base_emm.MMValueType</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#arca.ste.emm.PiBaseEMM.mm_value_serializer" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arca.ste.emm.PiBaseEMM.encryption_scheme">
+<span class="sig-name descname"><span class="pre">encryption_scheme</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="arca.ste.symmetric_encryption.html#arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme" title="arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme"><span class="pre">SymmetricEncryptionScheme</span></a></em><a class="headerlink" href="#arca.ste.emm.PiBaseEMM.encryption_scheme" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arca.ste.emm.PiBaseEMM.hashing_scheme">
+<span class="sig-name descname"><span class="pre">hashing_scheme</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="arca.ste.hash_functions.html#arca.ste.hash_functions.hash_function_scheme.HashFunctionScheme" title="arca.ste.hash_functions.hash_function_scheme.HashFunctionScheme"><span class="pre">HashFunctionScheme</span></a></em><a class="headerlink" href="#arca.ste.emm.PiBaseEMM.hashing_scheme" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arca.ste.emm.PiBaseEMM.key_length">
+<span class="sig-name descname"><span class="pre">key_length</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#arca.ste.emm.PiBaseEMM.key_length" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.PiBaseEMM.generate_key">
+<span class="sig-name descname"><span class="pre">generate_key</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.emm.PiBaseEMM.generate_key" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a key for the encrypted multimap scheme.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a key</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.PiBaseEMM.encrypt">
+<span class="sig-name descname"><span class="pre">encrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plaintext_mm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arca.ste.emm.multimap.Multimap" title="arca.ste.emm.multimap.Multimap"><span class="pre">Multimap</span></a><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.pi_base_emm.MMKeyType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arca.ste.emm.pi_base_emm.MMValueType</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.emm.PiBaseEMM.encrypt" title="Permalink to this definition"></a></dt>
+<dd><p>Encrypts the given plaintext multimap with the given key
+and returns a byte string representing the encrypted multimap.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.PiBaseEMM.encrypt.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.PiBaseEMM.encrypt.params.key">¶</a> – the key to encrypt with, as generated from <a class="reference internal" href="#arca.ste.emm.PiBaseEMM.generate_key" title="arca.ste.emm.PiBaseEMM.generate_key"><code class="xref py py-func docutils literal notranslate"><span class="pre">generate_key()</span></code></a></p></li>
+<li><p><span class="target" id="arca.ste.emm.PiBaseEMM.encrypt.params.plaintext_mm"></span><strong>plaintext_mm</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.PiBaseEMM.encrypt.params.plaintext_mm">¶</a> – the plaintext <a class="reference internal" href="#arca.ste.emm.Multimap" title="arca.ste.emm.Multimap"><code class="xref py py-class docutils literal notranslate"><span class="pre">Multimap</span></code></a> to encrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a serialized encrypted multimap</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.PiBaseEMM.load_eds">
+<span class="sig-name descname"><span class="pre">load_eds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eds_bytes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arca.ste.emm.PiBaseEMM.load_eds" title="Permalink to this definition"></a></dt>
+<dd><p>Deserializes a byte string representing an encrypted multimap
+into the type needed by the <a class="reference internal" href="#arca.ste.emm.PiBaseEMM.query" title="arca.ste.emm.PiBaseEMM.query"><code class="xref py py-func docutils literal notranslate"><span class="pre">query()</span></code></a> algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.emm.PiBaseEMM.load_eds.params.eds_bytes"></span><strong>eds_bytes</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.PiBaseEMM.load_eds.params.eds_bytes">¶</a> – a serialized encrypted multimap from <a class="reference internal" href="#arca.ste.emm.PiBaseEMM.encrypt" title="arca.ste.emm.PiBaseEMM.encrypt"><code class="xref py py-func docutils literal notranslate"><span class="pre">encrypt()</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a deserialized version of the encrypted multimap</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.PiBaseEMM.token">
+<span class="sig-name descname"><span class="pre">token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.pi_base_emm.MMKeyType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.emm.PiBaseEMM.token" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a search token for the given key and keyword.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.PiBaseEMM.token.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.PiBaseEMM.token.params.key">¶</a> – the key to encrypt with</p></li>
+<li><p><span class="target" id="arca.ste.emm.PiBaseEMM.token.params.keyword"></span><strong>keyword</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.PiBaseEMM.token.params.keyword">¶</a> – the keyword to query the encrypted multimap with</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a search token</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.PiBaseEMM.query">
+<span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.emm.PiBaseEMM.query" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a result for the given search token queried over the
+given encrypted multimap.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.PiBaseEMM.query.params.token"></span><strong>token</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.PiBaseEMM.query.params.token">¶</a> – a search token generated by <a class="reference internal" href="#arca.ste.emm.PiBaseEMM.token" title="arca.ste.emm.PiBaseEMM.token"><code class="xref py py-func docutils literal notranslate"><span class="pre">token()</span></code></a></p></li>
+<li><p><span class="target" id="arca.ste.emm.PiBaseEMM.query.params.eds"></span><strong>eds</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.PiBaseEMM.query.params.eds">¶</a> – the encrypted data structure from <a class="reference internal" href="#arca.ste.emm.PiBaseEMM.load_eds" title="arca.ste.emm.PiBaseEMM.load_eds"><code class="xref py py-func docutils literal notranslate"><span class="pre">load_eds()</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a serialized response to pass to <a class="reference internal" href="#arca.ste.emm.PiBaseEMM.resolve" title="arca.ste.emm.PiBaseEMM.resolve"><code class="xref py py-func docutils literal notranslate"><span class="pre">resolve()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.PiBaseEMM.resolve">
+<span class="sig-name descname"><span class="pre">resolve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.pi_base_emm.MMValueType</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arca.ste.emm.PiBaseEMM.resolve" title="Permalink to this definition"></a></dt>
+<dd><p>Resolves the serialized response returned by the server into
+a native List[MMValueType].</p>
+<p>If the encrypted multimap is response-hiding, the given key is
+also used to decrypt the response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.PiBaseEMM.resolve.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.PiBaseEMM.resolve.params.key">¶</a> – the key to decrypt with</p></li>
+<li><p><span class="target" id="arca.ste.emm.PiBaseEMM.resolve.params.response"></span><strong>response</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.PiBaseEMM.resolve.params.response">¶</a> – the serialized response from <a class="reference internal" href="#arca.ste.emm.PiBaseEMM.query" title="arca.ste.emm.PiBaseEMM.query"><code class="xref py py-func docutils literal notranslate"><span class="pre">query()</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a list of plaintext values</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.emm.Pi2LevEMM">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Pi2LevEMM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key_length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">16</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arca.ste.emm.Pi2LevEMM" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#arca.ste.emm.emm.EMM" title="arca.ste.emm.emm.EMM"><code class="xref py py-class docutils literal notranslate"><span class="pre">arca.ste.emm.emm.EMM</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.pi_2lev_emm.MMKeyType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.emm.pi_2lev_emm.MMValueType</span></code>]</p>
+<p>Implements the Pi_2lev scheme from [CJJJKRS14].</p>
+<p>Pi_2lev achieves more reasonable tradeoffs between index size and
+search time than Pi_bas by storing each set of records matching a
+keyword differently according to the size of the set.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.Pi2LevEMM.generate_key">
+<span class="sig-name descname"><span class="pre">generate_key</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.emm.Pi2LevEMM.generate_key" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a key for the encrypted multimap scheme.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a key</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.Pi2LevEMM.encrypt">
+<span class="sig-name descname"><span class="pre">encrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plaintext_mm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arca.ste.emm.multimap.Multimap" title="arca.ste.emm.multimap.Multimap"><span class="pre">Multimap</span></a><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.pi_2lev_emm.MMKeyType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arca.ste.emm.pi_2lev_emm.MMValueType</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.emm.Pi2LevEMM.encrypt" title="Permalink to this definition"></a></dt>
+<dd><p>Encrypts the given plaintext multimap with the given key
+and returns a byte string representing the encrypted multimap.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.Pi2LevEMM.encrypt.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.Pi2LevEMM.encrypt.params.key">¶</a> – the key to encrypt with, as generated from <a class="reference internal" href="#arca.ste.emm.Pi2LevEMM.generate_key" title="arca.ste.emm.Pi2LevEMM.generate_key"><code class="xref py py-func docutils literal notranslate"><span class="pre">generate_key()</span></code></a></p></li>
+<li><p><span class="target" id="arca.ste.emm.Pi2LevEMM.encrypt.params.plaintext_mm"></span><strong>plaintext_mm</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.Pi2LevEMM.encrypt.params.plaintext_mm">¶</a> – the plaintext <a class="reference internal" href="#arca.ste.emm.Multimap" title="arca.ste.emm.Multimap"><code class="xref py py-class docutils literal notranslate"><span class="pre">Multimap</span></code></a> to encrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a serialized encrypted multimap</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.Pi2LevEMM.load_eds">
+<span class="sig-name descname"><span class="pre">load_eds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eds_bytes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arca.ste.emm.Pi2LevEMM.load_eds" title="Permalink to this definition"></a></dt>
+<dd><p>Deserializes a byte string representing an encrypted multimap
+into the type needed by the <a class="reference internal" href="#arca.ste.emm.Pi2LevEMM.query" title="arca.ste.emm.Pi2LevEMM.query"><code class="xref py py-func docutils literal notranslate"><span class="pre">query()</span></code></a> algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.emm.Pi2LevEMM.load_eds.params.eds_bytes"></span><strong>eds_bytes</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.Pi2LevEMM.load_eds.params.eds_bytes">¶</a> – a serialized encrypted multimap from <a class="reference internal" href="#arca.ste.emm.Pi2LevEMM.encrypt" title="arca.ste.emm.Pi2LevEMM.encrypt"><code class="xref py py-func docutils literal notranslate"><span class="pre">encrypt()</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a deserialized version of the encrypted multimap</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.Pi2LevEMM.token">
+<span class="sig-name descname"><span class="pre">token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.emm.pi_2lev_emm.MMKeyType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.emm.Pi2LevEMM.token" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a search token for the given key and keyword.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.Pi2LevEMM.token.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.Pi2LevEMM.token.params.key">¶</a> – the key to encrypt with</p></li>
+<li><p><span class="target" id="arca.ste.emm.Pi2LevEMM.token.params.keyword"></span><strong>keyword</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.Pi2LevEMM.token.params.keyword">¶</a> – the keyword to query the encrypted multimap with</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a search token</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.Pi2LevEMM.query">
+<span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.emm.Pi2LevEMM.query" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a result for the given search token queried over the
+given encrypted multimap.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.Pi2LevEMM.query.params.token"></span><strong>token</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.Pi2LevEMM.query.params.token">¶</a> – a search token generated by <a class="reference internal" href="#arca.ste.emm.Pi2LevEMM.token" title="arca.ste.emm.Pi2LevEMM.token"><code class="xref py py-func docutils literal notranslate"><span class="pre">token()</span></code></a></p></li>
+<li><p><span class="target" id="arca.ste.emm.Pi2LevEMM.query.params.eds"></span><strong>eds</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.Pi2LevEMM.query.params.eds">¶</a> – the encrypted data structure from <a class="reference internal" href="#arca.ste.emm.Pi2LevEMM.load_eds" title="arca.ste.emm.Pi2LevEMM.load_eds"><code class="xref py py-func docutils literal notranslate"><span class="pre">load_eds()</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a serialized response to pass to <a class="reference internal" href="#arca.ste.emm.Pi2LevEMM.resolve" title="arca.ste.emm.Pi2LevEMM.resolve"><code class="xref py py-func docutils literal notranslate"><span class="pre">resolve()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.emm.Pi2LevEMM.resolve">
+<span class="sig-name descname"><span class="pre">resolve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">arca.ste.emm.pi_2lev_emm.MMValueType</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arca.ste.emm.Pi2LevEMM.resolve" title="Permalink to this definition"></a></dt>
+<dd><p>Resolves the serialized response returned by the server into
+a native List[MMValueType].</p>
+<p>If the encrypted multimap is response-hiding, the given key is
+also used to decrypt the response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.emm.Pi2LevEMM.resolve.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.Pi2LevEMM.resolve.params.key">¶</a> – the key to decrypt with</p></li>
+<li><p><span class="target" id="arca.ste.emm.Pi2LevEMM.resolve.params.response"></span><strong>response</strong><a class="paramlink headerlink reference internal" href="#arca.ste.emm.Pi2LevEMM.resolve.params.response">¶</a> – the serialized response from <a class="reference internal" href="#arca.ste.emm.Pi2LevEMM.query" title="arca.ste.emm.Pi2LevEMM.query"><code class="xref py py-func docutils literal notranslate"><span class="pre">query()</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a list of plaintext values</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="arca.ste.edx.html" class="btn btn-neutral float-left" title="arca.ste.edx package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="arca.ste.hash_functions.html" class="btn btn-neutral float-right" title="arca.ste.hash_functions package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Zachary Espiritu.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

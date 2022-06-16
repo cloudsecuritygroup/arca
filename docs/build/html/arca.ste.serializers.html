@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>arca.ste.serializers package &mdash; Arca 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_paramlinks.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="arca.ste.symmetric_encryption package" href="arca.ste.symmetric_encryption.html" />
+    <link rel="prev" title="arca.ste.key_derivation package" href="arca.ste.key_derivation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Arca
+          </a>
+              <div class="version">
+                Version 0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">arca</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="arca.html">arca package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="arca.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="arca.arq.html">arca.arq package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="arca.ste.html">arca.ste package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arca.util.html">arca.util package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arca.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arca.html#arca-crypto-module">arca.crypto module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arca.html#module-arca">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Arca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">arca</a> &raquo;</li>
+          <li><a href="arca.html">arca package</a> &raquo;</li>
+          <li><a href="arca.ste.html">arca.ste package</a> &raquo;</li>
+      <li>arca.ste.serializers package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/arca.ste.serializers.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="arca-ste-serializers-package">
+<h1>arca.ste.serializers package<a class="headerlink" href="#arca-ste-serializers-package" title="Permalink to this headline"></a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="arca-ste-serializers-int-serializer-module">
+<h2>arca.ste.serializers.int_serializer module<a class="headerlink" href="#arca-ste-serializers-int-serializer-module" title="Permalink to this headline"></a></h2>
+<span class="target" id="module-arca.ste.serializers.int_serializer"></span><dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.serializers.int_serializer.IntSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IntSerializer</span></span><a class="headerlink" href="#arca.ste.serializers.int_serializer.IntSerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#arca.ste.serializers.serializer.Serializer" title="arca.ste.serializers.serializer.Serializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">arca.ste.serializers.serializer.Serializer</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.serializers.int_serializer.IntSerializer.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.serializers.int_serializer.IntSerializer.save" title="Permalink to this definition"></a></dt>
+<dd><p>Serializes the given value into a byte string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.serializers.int_serializer.IntSerializer.save.params.value"></span><strong>value</strong><a class="paramlink headerlink reference internal" href="#arca.ste.serializers.int_serializer.IntSerializer.save.params.value">¶</a> – the value to serialize</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the value in serialized form</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.serializers.int_serializer.IntSerializer.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blob</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#arca.ste.serializers.int_serializer.IntSerializer.load" title="Permalink to this definition"></a></dt>
+<dd><p>Restores the value of type T from the given blob.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.serializers.int_serializer.IntSerializer.load.params.blob"></span><strong>blob</strong><a class="paramlink headerlink reference internal" href="#arca.ste.serializers.int_serializer.IntSerializer.load.params.blob">¶</a> – the byte string to deserialize, as previously
+generated from <a class="reference internal" href="#arca.ste.serializers.int_serializer.IntSerializer.save" title="arca.ste.serializers.int_serializer.IntSerializer.save"><code class="xref py py-func docutils literal notranslate"><span class="pre">save()</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the original value</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arca-ste-serializers-pickle-serializer-module">
+<h2>arca.ste.serializers.pickle_serializer module<a class="headerlink" href="#arca-ste-serializers-pickle-serializer-module" title="Permalink to this headline"></a></h2>
+<span class="target" id="module-arca.ste.serializers.pickle_serializer"></span><dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.serializers.pickle_serializer.PickleSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PickleSerializer</span></span><a class="headerlink" href="#arca.ste.serializers.pickle_serializer.PickleSerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#arca.ste.serializers.serializer.Serializer" title="arca.ste.serializers.serializer.Serializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">arca.ste.serializers.serializer.Serializer</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code>]</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.serializers.pickle_serializer.PickleSerializer.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.serializers.pickle_serializer.PickleSerializer.save" title="Permalink to this definition"></a></dt>
+<dd><p>Serializes the given value into a byte string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.serializers.pickle_serializer.PickleSerializer.save.params.value"></span><strong>value</strong><a class="paramlink headerlink reference internal" href="#arca.ste.serializers.pickle_serializer.PickleSerializer.save.params.value">¶</a> – the value to serialize</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the value in serialized form</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.serializers.pickle_serializer.PickleSerializer.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blob</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#arca.ste.serializers.pickle_serializer.PickleSerializer.load" title="Permalink to this definition"></a></dt>
+<dd><p>Restores the value of type T from the given blob.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.serializers.pickle_serializer.PickleSerializer.load.params.blob"></span><strong>blob</strong><a class="paramlink headerlink reference internal" href="#arca.ste.serializers.pickle_serializer.PickleSerializer.load.params.blob">¶</a> – the byte string to deserialize, as previously
+generated from <a class="reference internal" href="#arca.ste.serializers.pickle_serializer.PickleSerializer.save" title="arca.ste.serializers.pickle_serializer.PickleSerializer.save"><code class="xref py py-func docutils literal notranslate"><span class="pre">save()</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the original value</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arca-ste-serializers-serializer-module">
+<h2>arca.ste.serializers.serializer module<a class="headerlink" href="#arca-ste-serializers-serializer-module" title="Permalink to this headline"></a></h2>
+<span class="target" id="module-arca.ste.serializers.serializer"></span><dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.serializers.serializer.Serializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Serializer</span></span><a class="headerlink" href="#arca.ste.serializers.serializer.Serializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.serializers.serializer.T</span></code>]</p>
+<p>Serializes a particular data type T. Used to allow users to specify
+how items are serialized prior to storing them in an encrypted data
+structure.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.serializers.serializer.Serializer.save">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.serializers.serializer.T</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.serializers.serializer.Serializer.save" title="Permalink to this definition"></a></dt>
+<dd><p>Serializes the given value into a byte string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.serializers.serializer.Serializer.save.params.value"></span><strong>value</strong><a class="paramlink headerlink reference internal" href="#arca.ste.serializers.serializer.Serializer.save.params.value">¶</a> – the value to serialize</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the value in serialized form</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.serializers.serializer.Serializer.load">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blob</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">arca.ste.serializers.serializer.T</span></span></span><a class="headerlink" href="#arca.ste.serializers.serializer.Serializer.load" title="Permalink to this definition"></a></dt>
+<dd><p>Restores the value of type T from the given blob.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.serializers.serializer.Serializer.load.params.blob"></span><strong>blob</strong><a class="paramlink headerlink reference internal" href="#arca.ste.serializers.serializer.Serializer.load.params.blob">¶</a> – the byte string to deserialize, as previously
+generated from <a class="reference internal" href="#arca.ste.serializers.serializer.Serializer.save" title="arca.ste.serializers.serializer.Serializer.save"><code class="xref py py-func docutils literal notranslate"><span class="pre">save()</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the original value</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-arca.ste.serializers">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-arca.ste.serializers" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.serializers.Serializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Serializer</span></span><a class="headerlink" href="#arca.ste.serializers.Serializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">arca.ste.serializers.serializer.T</span></code>]</p>
+<p>Serializes a particular data type T. Used to allow users to specify
+how items are serialized prior to storing them in an encrypted data
+structure.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.serializers.Serializer.save">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arca.ste.serializers.serializer.T</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.serializers.Serializer.save" title="Permalink to this definition"></a></dt>
+<dd><p>Serializes the given value into a byte string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.serializers.Serializer.save.params.value"></span><strong>value</strong><a class="paramlink headerlink reference internal" href="#arca.ste.serializers.Serializer.save.params.value">¶</a> – the value to serialize</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the value in serialized form</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.serializers.Serializer.load">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blob</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">arca.ste.serializers.serializer.T</span></span></span><a class="headerlink" href="#arca.ste.serializers.Serializer.load" title="Permalink to this definition"></a></dt>
+<dd><p>Restores the value of type T from the given blob.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.serializers.Serializer.load.params.blob"></span><strong>blob</strong><a class="paramlink headerlink reference internal" href="#arca.ste.serializers.Serializer.load.params.blob">¶</a> – the byte string to deserialize, as previously
+generated from <a class="reference internal" href="#arca.ste.serializers.Serializer.save" title="arca.ste.serializers.Serializer.save"><code class="xref py py-func docutils literal notranslate"><span class="pre">save()</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the original value</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.serializers.IntSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IntSerializer</span></span><a class="headerlink" href="#arca.ste.serializers.IntSerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#arca.ste.serializers.serializer.Serializer" title="arca.ste.serializers.serializer.Serializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">arca.ste.serializers.serializer.Serializer</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.serializers.IntSerializer.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.serializers.IntSerializer.save" title="Permalink to this definition"></a></dt>
+<dd><p>Serializes the given value into a byte string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.serializers.IntSerializer.save.params.value"></span><strong>value</strong><a class="paramlink headerlink reference internal" href="#arca.ste.serializers.IntSerializer.save.params.value">¶</a> – the value to serialize</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the value in serialized form</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.serializers.IntSerializer.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blob</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#arca.ste.serializers.IntSerializer.load" title="Permalink to this definition"></a></dt>
+<dd><p>Restores the value of type T from the given blob.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.serializers.IntSerializer.load.params.blob"></span><strong>blob</strong><a class="paramlink headerlink reference internal" href="#arca.ste.serializers.IntSerializer.load.params.blob">¶</a> – the byte string to deserialize, as previously
+generated from <a class="reference internal" href="#arca.ste.serializers.IntSerializer.save" title="arca.ste.serializers.IntSerializer.save"><code class="xref py py-func docutils literal notranslate"><span class="pre">save()</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the original value</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.serializers.PickleSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PickleSerializer</span></span><a class="headerlink" href="#arca.ste.serializers.PickleSerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#arca.ste.serializers.serializer.Serializer" title="arca.ste.serializers.serializer.Serializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">arca.ste.serializers.serializer.Serializer</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code>]</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.serializers.PickleSerializer.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.serializers.PickleSerializer.save" title="Permalink to this definition"></a></dt>
+<dd><p>Serializes the given value into a byte string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.serializers.PickleSerializer.save.params.value"></span><strong>value</strong><a class="paramlink headerlink reference internal" href="#arca.ste.serializers.PickleSerializer.save.params.value">¶</a> – the value to serialize</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the value in serialized form</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.serializers.PickleSerializer.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blob</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#arca.ste.serializers.PickleSerializer.load" title="Permalink to this definition"></a></dt>
+<dd><p>Restores the value of type T from the given blob.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.serializers.PickleSerializer.load.params.blob"></span><strong>blob</strong><a class="paramlink headerlink reference internal" href="#arca.ste.serializers.PickleSerializer.load.params.blob">¶</a> – the byte string to deserialize, as previously
+generated from <a class="reference internal" href="#arca.ste.serializers.PickleSerializer.save" title="arca.ste.serializers.PickleSerializer.save"><code class="xref py py-func docutils literal notranslate"><span class="pre">save()</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the original value</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.serializers.StructSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StructSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arca.ste.serializers.StructSerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#arca.ste.serializers.serializer.Serializer" title="arca.ste.serializers.serializer.Serializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">arca.ste.serializers.serializer.Serializer</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code>]</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arca.ste.serializers.StructSerializer.format_string">
+<span class="sig-name descname"><span class="pre">format_string</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#arca.ste.serializers.StructSerializer.format_string" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.serializers.StructSerializer.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.serializers.StructSerializer.save" title="Permalink to this definition"></a></dt>
+<dd><p>Serializes the given value into a byte string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.serializers.StructSerializer.save.params.value"></span><strong>value</strong><a class="paramlink headerlink reference internal" href="#arca.ste.serializers.StructSerializer.save.params.value">¶</a> – the value to serialize</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the value in serialized form</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.serializers.StructSerializer.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blob</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#arca.ste.serializers.StructSerializer.load" title="Permalink to this definition"></a></dt>
+<dd><p>Restores the value of type T from the given blob.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arca.ste.serializers.StructSerializer.load.params.blob"></span><strong>blob</strong><a class="paramlink headerlink reference internal" href="#arca.ste.serializers.StructSerializer.load.params.blob">¶</a> – the byte string to deserialize, as previously
+generated from <a class="reference internal" href="#arca.ste.serializers.StructSerializer.save" title="arca.ste.serializers.StructSerializer.save"><code class="xref py py-func docutils literal notranslate"><span class="pre">save()</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the original value</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="arca.ste.key_derivation.html" class="btn btn-neutral float-left" title="arca.ste.key_derivation package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="arca.ste.symmetric_encryption.html" class="btn btn-neutral float-right" title="arca.ste.symmetric_encryption package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Zachary Espiritu.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

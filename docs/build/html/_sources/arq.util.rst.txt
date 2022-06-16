@@ -1,0 +1,21 @@
+arq.util package
+================
+
+Submodules
+----------
+
+arq.util.math module
+--------------------
+
+.. automodule:: arq.util.math
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: arq.util
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>arq.arq package &mdash; arq 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_paramlinks.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="arq.arq.plaintext_schemes package" href="arq.arq.plaintext_schemes.html" />
+    <link rel="prev" title="arq package" href="arq.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> arq
+          </a>
+              <div class="version">
+                Version 0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">arq</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="arq.html">arq package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="arq.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">arq.arq package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arq.ste.html">arq.ste package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arq.util.html">arq.util package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arq.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arq.html#module-arq.crypto">arq.crypto module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arq.html#module-arq">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">arq</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">arq</a> &raquo;</li>
+          <li><a href="arq.html">arq package</a> &raquo;</li>
+      <li>arq.arq package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/arq.arq.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="arq-arq-package">
+<h1>arq.arq package<a class="headerlink" href="#arq-arq-package" title="Permalink to this headline"></a></h1>
+<p><strong>ARQ</strong> is an easy-to-use Python library for creating cryptographic schemes
+that handle aggregate range queries (sum, minimum, median, and mode) over
+encrypted datasets. Using <strong>ARQ</strong>, structures from the plaintext data
+management community may be easily unified with existing
+<em>structured encryption</em> primitives to produce schemes with defined, provable
+leakage profiles and security guarantees.</p>
+<p>The <strong>ARQ</strong> library includes several constructions that handle various types
+of encrypted aggregate range queries. Most of the implemented schemes
+have <em>constant</em> asympototic query complexity in the worst-case.</p>
+<p>The <strong>ARQ</strong> framework and associated schemes are described in more detail
+(with formal security definitions and proofs) in the paper “Time- and
+Space-Efficient Range Aggregate Queries on Encrypted Databases” by Zachary
+Espiritu, Evangelia Anna Markatou, and Roberto Tamassia. Our paper provides
+more details on the benefits of the <strong>ARQ</strong> framework in comparison to prior
+work, as well as formal leakage definitions and adaptive security proofs.</p>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline"></a></h2>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">arq.arq</span> <span class="kn">import</span> <span class="n">ARQ</span><span class="p">,</span> <span class="n">Table</span><span class="p">,</span> <span class="n">RangeQuery</span>
+<span class="kn">from</span> <span class="nn">arq.arq.plaintext_schemes.sum</span> <span class="kn">import</span> <span class="n">SumPrefix</span>
+<span class="kn">from</span> <span class="nn">arq.ste.edx</span> <span class="kn">import</span> <span class="n">SimpleEDX</span>
+<span class="kn">from</span> <span class="nn">arq.ste.serializers</span> <span class="kn">import</span> <span class="n">IntSerializer</span>
+
+<span class="c1"># Make a Table:</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">make</span><span class="p">([(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)])</span>
+
+<span class="c1"># Choose your aggregate scheme:</span>
+<span class="n">aggregate_scheme</span> <span class="o">=</span> <span class="n">SumPrefix</span><span class="p">()</span>
+
+<span class="c1"># Choose an appropiate structured encryption scheme for the data</span>
+<span class="c1"># structure output by your chosen aggregate scheme. SumPrefix</span>
+<span class="c1"># outputs a Dict[int, int], so we can use the SimpleEDX scheme to</span>
+<span class="c1"># encrypt the dictionary. Since the keys and values of the</span>
+<span class="c1"># dictionary are integers, we can also set the serializers used by</span>
+<span class="c1"># SimpleEDX to IntSerializer for both the keys and values:</span>
+<span class="n">eds_scheme</span> <span class="o">=</span> <span class="n">SimpleEDX</span><span class="p">(</span>
+   <span class="n">dx_key_serializer</span><span class="o">=</span><span class="n">IntSerializer</span><span class="p">(),</span>
+   <span class="n">dx_value_serializer</span><span class="o">=</span><span class="n">IntSerializer</span><span class="p">(),</span>
+<span class="p">)</span>
+
+<span class="c1"># Instantiate the ARQ framework with your chosen aggregate scheme</span>
+<span class="c1"># and structured encryption scheme:</span>
+<span class="n">arq_scheme</span> <span class="o">=</span> <span class="n">ARQ</span><span class="p">(</span>
+   <span class="n">aggregate_scheme</span><span class="o">=</span><span class="n">aggregate_scheme</span><span class="p">,</span>
+   <span class="n">eds_scheme</span><span class="o">=</span><span class="n">eds_scheme</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># In the setup phase (run on the client), generate a key and encrypt</span>
+<span class="c1"># the table with the scheme:</span>
+<span class="n">key</span> <span class="o">=</span> <span class="n">arq_scheme</span><span class="o">.</span><span class="n">generate_key</span><span class="p">()</span>
+<span class="n">eds_serialized</span> <span class="o">=</span> <span class="n">arq_scheme</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span>
+
+<span class="c1"># Send the serialized encrypted index to the server, then unserialize</span>
+<span class="c1"># it on the server-side:</span>
+<span class="n">eds</span> <span class="o">=</span> <span class="n">arq_scheme</span><span class="o">.</span><span class="n">load_eds</span><span class="p">(</span><span class="n">eds_serialized</span><span class="p">)</span>
+
+<span class="c1"># In the query phase, the client makes a query (example: [0, 4)) and</span>
+<span class="c1"># retrieves the result:</span>
+<span class="n">range_query</span> <span class="o">=</span> <span class="n">RangeQuery</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">arq_scheme</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">table</span><span class="o">.</span><span class="n">domain</span><span class="p">,</span> <span class="n">range_query</span><span class="p">,</span> <span class="n">eds</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="arq.arq.plaintext_schemes.html">arq.arq.plaintext_schemes package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arq.arq.plaintext_schemes.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="arq.arq.plaintext_schemes.median.html">arq.arq.plaintext_schemes.median package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arq.arq.plaintext_schemes.median.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arq.arq.plaintext_schemes.median.html#module-arq.arq.plaintext_schemes.median.median_alpha_approx">arq.arq.plaintext_schemes.median.median_alpha_approx module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arq.arq.plaintext_schemes.median.html#module-arq.arq.plaintext_schemes.median">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arq.arq.plaintext_schemes.minimum.html">arq.arq.plaintext_schemes.minimum package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arq.arq.plaintext_schemes.minimum.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arq.arq.plaintext_schemes.minimum.html#module-arq.arq.plaintext_schemes.minimum.minimum_linear_emt">arq.arq.plaintext_schemes.minimum.minimum_linear_emt module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arq.arq.plaintext_schemes.minimum.html#module-arq.arq.plaintext_schemes.minimum.minimum_sparse_table">arq.arq.plaintext_schemes.minimum.minimum_sparse_table module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arq.arq.plaintext_schemes.minimum.html#module-arq.arq.plaintext_schemes.minimum">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arq.arq.plaintext_schemes.mode.html">arq.arq.plaintext_schemes.mode package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arq.arq.plaintext_schemes.mode.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arq.arq.plaintext_schemes.mode.html#module-arq.arq.plaintext_schemes.mode.mode_as_table">arq.arq.plaintext_schemes.mode.mode_as_table module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arq.arq.plaintext_schemes.mode.html#module-arq.arq.plaintext_schemes.mode">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arq.arq.plaintext_schemes.sum.html">arq.arq.plaintext_schemes.sum package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arq.arq.plaintext_schemes.sum.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arq.arq.plaintext_schemes.sum.html#module-arq.arq.plaintext_schemes.sum.sum_prefix">arq.arq.plaintext_schemes.sum.sum_prefix module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arq.arq.plaintext_schemes.sum.html#module-arq.arq.plaintext_schemes.sum">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="arq.arq.plaintext_schemes.html#module-arq.arq.plaintext_schemes">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="module-arq.arq.arq">
+<span id="arq-arq-arq-module"></span><h2>arq.arq.arq module<a class="headerlink" href="#module-arq.arq.arq" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="arq.arq.arq.QueryDone">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">QueryDone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aggregate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arq.arq.arq.QueryDone" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arq.arq.arq.QueryDone.aggregate">
+<span class="sig-name descname"><span class="pre">aggregate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#arq.arq.arq.QueryDone.aggregate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="arq.arq.arq.QueryContinue">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">QueryContinue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_tokens</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arq.arq.arq.QueryContinue" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arq.arq.arq.QueryContinue.search_tokens">
+<span class="sig-name descname"><span class="pre">search_tokens</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#arq.arq.arq.QueryContinue.search_tokens" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="arq.arq.arq.ARQ">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ARQ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eds_scheme</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="arq.ste.html#arq.ste.eds.EDS" title="arq.ste.eds.EDS"><span class="pre">EDS</span></a><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.AggregateSchemeOutputType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.EdsType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.TokenInputType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.ResolveOutputType</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggregate_scheme</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arq.arq.range_aggregate_scheme.RangeAggregateScheme" title="arq.arq.range_aggregate_scheme.RangeAggregateScheme"><span class="pre">RangeAggregateScheme</span></a><span class="p"><span class="pre">[</span></span><span class="pre">arq.arq.arq.AggregateSchemeOutputType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.TokenInputType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.ResolveOutputType</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arq.arq.arq.ARQ" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">arq.arq.arq.AggregateSchemeOutputType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arq.arq.arq.EdsType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arq.arq.arq.TokenInputType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arq.arq.arq.ResolveOutputType</span></code>]</p>
+<p>An implementation of the ARQ framework from [EMT22].</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arq.arq.arq.ARQ.eds_scheme">
+<span class="sig-name descname"><span class="pre">eds_scheme</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="arq.ste.html#arq.ste.eds.EDS" title="arq.ste.eds.EDS"><span class="pre">EDS</span></a><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.AggregateSchemeOutputType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.EdsType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.TokenInputType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.ResolveOutputType</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#arq.arq.arq.ARQ.eds_scheme" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arq.arq.arq.ARQ.aggregate_scheme">
+<span class="sig-name descname"><span class="pre">aggregate_scheme</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#arq.arq.range_aggregate_scheme.RangeAggregateScheme" title="arq.arq.range_aggregate_scheme.RangeAggregateScheme"><span class="pre">RangeAggregateScheme</span></a><span class="p"><span class="pre">[</span></span><span class="pre">arq.arq.arq.AggregateSchemeOutputType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.TokenInputType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.ResolveOutputType</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#arq.arq.arq.ARQ.aggregate_scheme" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.arq.ARQ.generate_key">
+<span class="sig-name descname"><span class="pre">generate_key</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arq.arq.arq.ARQ.generate_key" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a key for use in <a class="reference internal" href="#arq.arq.arq.ARQ.setup" title="arq.arq.arq.ARQ.setup"><code class="xref py py-func docutils literal notranslate"><span class="pre">setup()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a key</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.arq.ARQ.setup">
+<span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arq.arq.table.Table" title="arq.arq.table.Table"><span class="pre">Table</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arq.arq.arq.ARQ.setup" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a new encrypted range aggregate index over the given
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code> with the given <a class="reference internal" href="#arq.arq.arq.ARQ.setup.params.key" title="arq.arq.arq.ARQ.setup"><code class="xref py py-paramref docutils literal notranslate"><span class="pre">key</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arq.arq.arq.ARQ.setup.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arq.arq.arq.ARQ.setup.params.key">¶</a> – the key to encrypt with</p></li>
+<li><p><span class="target" id="arq.arq.arq.ARQ.setup.params.table"></span><strong>table</strong><a class="paramlink headerlink reference internal" href="#arq.arq.arq.ARQ.setup.params.table">¶</a> – the <code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code> to compute the encrypted index over</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the serialized encrypted index</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.arq.ARQ.load_eds">
+<span class="sig-name descname"><span class="pre">load_eds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eds_serialized</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">arq.arq.arq.EdsType</span></span></span><a class="headerlink" href="#arq.arq.arq.ARQ.load_eds" title="Permalink to this definition"></a></dt>
+<dd><p>Deserializes the given encrypted data structure that was previously
+generated by <a class="reference internal" href="#arq.arq.arq.ARQ.setup" title="arq.arq.arq.ARQ.setup"><code class="xref py py-func docutils literal notranslate"><span class="pre">setup()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arq.arq.arq.ARQ.load_eds.params.eds_serialized"></span><strong>eds_serialized</strong><a class="paramlink headerlink reference internal" href="#arq.arq.arq.ARQ.load_eds.params.eds_serialized">¶</a> – the serialized eds to load, as generated by
+<a class="reference internal" href="#arq.arq.arq.ARQ.setup" title="arq.arq.arq.ARQ.setup"><code class="xref py py-func docutils literal notranslate"><span class="pre">setup()</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the deserialized encrypted data structure</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.arq.ARQ.query_server">
+<span class="sig-name descname"><span class="pre">query_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_tokens</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arq.arq.arq.EdsType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arq.arq.arq.ARQ.query_server" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.arq.ARQ.query">
+<span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arq.arq.domain.Domain" title="arq.arq.domain.Domain"><span class="pre">Domain</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arq.arq.range_query.RangeQuery" title="arq.arq.range_query.RangeQuery"><span class="pre">RangeQuery</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">eds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arq.arq.arq.EdsType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arq.arq.arq.ARQ.query" title="Permalink to this definition"></a></dt>
+<dd><p>Queries the given encrypted data structure with the given query.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-arq.arq.domain">
+<span id="arq-arq-domain-module"></span><h2>arq.arq.domain module<a class="headerlink" href="#module-arq.arq.domain" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="arq.arq.domain.Domain">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Domain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arq.arq.domain.Domain" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents the range of queryable values in a <code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code>.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arq.arq.domain.Domain.start">
+<span class="sig-name descname"><span class="pre">start</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#arq.arq.domain.Domain.start" title="Permalink to this definition"></a></dt>
+<dd><p>Start of the domain (inclusive).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arq.arq.domain.Domain.end">
+<span class="sig-name descname"><span class="pre">end</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#arq.arq.domain.Domain.end" title="Permalink to this definition"></a></dt>
+<dd><p>End of the domain (exclusive).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.domain.Domain.size">
+<span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#arq.arq.domain.Domain.size" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the number of possible domain values. In other words,
+size = end - start.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the size of the <a class="reference internal" href="#arq.arq.domain.Domain" title="arq.arq.domain.Domain"><code class="xref py py-class docutils literal notranslate"><span class="pre">Domain</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-arq.arq.range_aggregate_querier">
+<span id="arq-arq-range-aggregate-querier-module"></span><h2>arq.arq.range_aggregate_querier module<a class="headerlink" href="#module-arq.arq.range_aggregate_querier" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="arq.arq.range_aggregate_querier.ResolveDone">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ResolveDone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aggregate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arq.arq.range_aggregate_querier.ResolveDone" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arq.arq.range_aggregate_querier.ResolveDone.aggregate">
+<span class="sig-name descname"><span class="pre">aggregate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#arq.arq.range_aggregate_querier.ResolveDone.aggregate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="arq.arq.range_aggregate_querier.ResolveContinue">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ResolveContinue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subqueries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">ResolveDSQueryType</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arq.arq.range_aggregate_querier.ResolveContinue" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">arq.arq.range_aggregate_querier.ResolveDSQueryType</span></code>]</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arq.arq.range_aggregate_querier.ResolveContinue.subqueries">
+<span class="sig-name descname"><span class="pre">subqueries</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">arq.arq.range_aggregate_querier.ResolveDSQueryType</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#arq.arq.range_aggregate_querier.ResolveContinue.subqueries" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="arq.arq.range_aggregate_querier.RangeAggregateQuerier">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RangeAggregateQuerier</span></span><a class="headerlink" href="#arq.arq.range_aggregate_querier.RangeAggregateQuerier" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">arq.arq.range_aggregate_querier.DSQueryType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arq.arq.range_aggregate_querier.DSResponseType</span></code>]</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.range_aggregate_querier.RangeAggregateQuerier.query">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">arq.arq.range_aggregate_querier.DSQueryType</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arq.arq.range_aggregate_querier.RangeAggregateQuerier.query" title="Permalink to this definition"></a></dt>
+<dd><p>Corresponds to the <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> algorithm.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.range_aggregate_querier.RangeAggregateQuerier.resolve">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">resolve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">responses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">arq.arq.range_aggregate_querier.DSResponseType</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#arq.arq.range_aggregate_querier.ResolveDone" title="arq.arq.range_aggregate_querier.ResolveDone"><span class="pre">ResolveDone</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#arq.arq.range_aggregate_querier.ResolveContinue" title="arq.arq.range_aggregate_querier.ResolveContinue"><span class="pre">ResolveContinue</span></a><span class="p"><span class="pre">[</span></span><span class="pre">arq.arq.range_aggregate_querier.DSQueryType</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arq.arq.range_aggregate_querier.RangeAggregateQuerier.resolve" title="Permalink to this definition"></a></dt>
+<dd><p>Corresponds to the <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> algorithm.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-arq.arq.range_aggregate_scheme">
+<span id="arq-arq-range-aggregate-scheme-module"></span><h2>arq.arq.range_aggregate_scheme module<a class="headerlink" href="#module-arq.arq.range_aggregate_scheme" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="arq.arq.range_aggregate_scheme.RangeAggregateScheme">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RangeAggregateScheme</span></span><a class="headerlink" href="#arq.arq.range_aggregate_scheme.RangeAggregateScheme" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">arq.arq.range_aggregate_scheme.DSType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arq.arq.range_aggregate_scheme.DSQueryType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arq.arq.range_aggregate_scheme.DSResponseType</span></code>]</p>
+<p>Interface corresponding to the plaintext aggregate range query scheme
+syntax <span class="math notranslate nohighlight">\((\mathbb{S}, \mathbb{Q}, \mathbb{R})\)</span> defined in [EMT22].</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.range_aggregate_scheme.RangeAggregateScheme.setup">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arq.arq.table.Table" title="arq.arq.table.Table"><span class="pre">Table</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">arq.arq.range_aggregate_scheme.DSType</span></span></span><a class="headerlink" href="#arq.arq.range_aggregate_scheme.RangeAggregateScheme.setup" title="Permalink to this definition"></a></dt>
+<dd><p>Corresponds to the <span class="math notranslate nohighlight">\(\mathbb{S}\)</span> algorithm.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.range_aggregate_scheme.RangeAggregateScheme.generate_querier">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">generate_querier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arq.arq.domain.Domain" title="arq.arq.domain.Domain"><span class="pre">Domain</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arq.arq.range_query.RangeQuery" title="arq.arq.range_query.RangeQuery"><span class="pre">RangeQuery</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#arq.arq.range_aggregate_querier.RangeAggregateQuerier" title="arq.arq.range_aggregate_querier.RangeAggregateQuerier"><span class="pre">RangeAggregateQuerier</span></a><span class="p"><span class="pre">[</span></span><span class="pre">arq.arq.range_aggregate_scheme.DSQueryType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.range_aggregate_scheme.DSResponseType</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arq.arq.range_aggregate_scheme.RangeAggregateScheme.generate_querier" title="Permalink to this definition"></a></dt>
+<dd><p>Corresponds to the <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> algorithm.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-arq.arq.range_query">
+<span id="arq-arq-range-query-module"></span><h2>arq.arq.range_query module<a class="headerlink" href="#module-arq.arq.range_query" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="arq.arq.range_query.RangeQuery">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RangeQuery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arq.arq.range_query.RangeQuery" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a range query.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arq.arq.range_query.RangeQuery.start">
+<span class="sig-name descname"><span class="pre">start</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#arq.arq.range_query.RangeQuery.start" title="Permalink to this definition"></a></dt>
+<dd><p>Start of the range (inclusive).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arq.arq.range_query.RangeQuery.end">
+<span class="sig-name descname"><span class="pre">end</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#arq.arq.range_query.RangeQuery.end" title="Permalink to this definition"></a></dt>
+<dd><p>End of the range (exclusive).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.range_query.RangeQuery.length">
+<span class="sig-name descname"><span class="pre">length</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#arq.arq.range_query.RangeQuery.length" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the number of domain values contained within the query. In
+other words, length = end - start.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the length of the <a class="reference internal" href="#arq.arq.range_query.RangeQuery" title="arq.arq.range_query.RangeQuery"><code class="xref py py-class docutils literal notranslate"><span class="pre">RangeQuery</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.range_query.RangeQuery.enumerate_all">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">enumerate_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arq.arq.domain.Domain" title="arq.arq.domain.Domain"><span class="pre">Domain</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#arq.arq.range_query.RangeQuery" title="arq.arq.range_query.RangeQuery"><span class="pre">RangeQuery</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arq.arq.range_query.RangeQuery.enumerate_all" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-arq.arq.table">
+<span id="arq-arq-table-module"></span><h2>arq.arq.table module<a class="headerlink" href="#module-arq.arq.table" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="arq.arq.table.Table">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arq.arq.domain.Domain" title="arq.arq.domain.Domain"><span class="pre">Domain</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arq.arq.table.Table" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a collection of records.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arq.arq.table.Table.entries">
+<span class="sig-name descname"><span class="pre">entries</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#arq.arq.table.Table.entries" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arq.arq.table.Table.domain">
+<span class="sig-name descname"><span class="pre">domain</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#arq.arq.domain.Domain" title="arq.arq.domain.Domain"><span class="pre">Domain</span></a></em><a class="headerlink" href="#arq.arq.table.Table.domain" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.table.Table.filter">
+<span class="sig-name descname"><span class="pre">filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arq.arq.table.Table.filter" title="Permalink to this definition"></a></dt>
+<dd><p>Returns all of the records with matching domain_value. The
+returned List is not in any defined order (only used to
+allow for duplicates).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arq.arq.table.Table.filter.params.domain_value"></span><strong>domain_value</strong><a class="paramlink headerlink reference internal" href="#arq.arq.table.Table.filter.params.domain_value">¶</a> – the domain value to filter for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a List of all records located at the particular domain_value</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.table.Table.filter_range">
+<span class="sig-name descname"><span class="pre">filter_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">range_query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arq.arq.range_query.RangeQuery" title="arq.arq.range_query.RangeQuery"><span class="pre">RangeQuery</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arq.arq.table.Table.filter_range" title="Permalink to this definition"></a></dt>
+<dd><p>Returns all of the records contained in the given range_query.
+The returned List is not in any defined order (only used to
+allow for duplicates).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arq.arq.table.Table.filter_range.params.range_query"></span><strong>range_query</strong><a class="paramlink headerlink reference internal" href="#arq.arq.table.Table.filter_range.params.range_query">¶</a> – the range to filter over</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a List of all records matching the filter</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.table.Table.iterate_over_unique_domain_points">
+<span class="sig-name descname"><span class="pre">iterate_over_unique_domain_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">disambiguator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arq.arq.table.Table.iterate_over_unique_domain_points" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.table.Table.make">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">make</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">records</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#arq.arq.table.Table" title="arq.arq.table.Table"><span class="pre">Table</span></a></span></span><a class="headerlink" href="#arq.arq.table.Table.make" title="Permalink to this definition"></a></dt>
+<dd><p>Makes a table from the records in the given iterator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arq.arq.table.Table.make.params.records"></span><strong>records</strong><a class="paramlink headerlink reference internal" href="#arq.arq.table.Table.make.params.records">¶</a> – the records to generate the <a class="reference internal" href="#arq.arq.table.Table" title="arq.arq.table.Table"><code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code></a> from</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a new <a class="reference internal" href="#arq.arq.table.Table" title="arq.arq.table.Table"><code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.table.Table.make_from_list">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">make_from_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">records</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#arq.arq.table.Table" title="arq.arq.table.Table"><span class="pre">Table</span></a></span></span><a class="headerlink" href="#arq.arq.table.Table.make_from_list" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-arq.arq">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-arq.arq" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="arq.arq.ARQ">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ARQ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eds_scheme</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="arq.ste.html#arq.ste.eds.EDS" title="arq.ste.eds.EDS"><span class="pre">EDS</span></a><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.AggregateSchemeOutputType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.EdsType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.TokenInputType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.ResolveOutputType</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggregate_scheme</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arq.arq.range_aggregate_scheme.RangeAggregateScheme" title="arq.arq.range_aggregate_scheme.RangeAggregateScheme"><span class="pre">RangeAggregateScheme</span></a><span class="p"><span class="pre">[</span></span><span class="pre">arq.arq.arq.AggregateSchemeOutputType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.TokenInputType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.ResolveOutputType</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arq.arq.ARQ" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">arq.arq.arq.AggregateSchemeOutputType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arq.arq.arq.EdsType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arq.arq.arq.TokenInputType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arq.arq.arq.ResolveOutputType</span></code>]</p>
+<p>An implementation of the ARQ framework from [EMT22].</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arq.arq.ARQ.eds_scheme">
+<span class="sig-name descname"><span class="pre">eds_scheme</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="arq.ste.html#arq.ste.eds.EDS" title="arq.ste.eds.EDS"><span class="pre">EDS</span></a><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.AggregateSchemeOutputType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.EdsType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.TokenInputType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.ResolveOutputType</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#arq.arq.ARQ.eds_scheme" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arq.arq.ARQ.aggregate_scheme">
+<span class="sig-name descname"><span class="pre">aggregate_scheme</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#arq.arq.range_aggregate_scheme.RangeAggregateScheme" title="arq.arq.range_aggregate_scheme.RangeAggregateScheme"><span class="pre">RangeAggregateScheme</span></a><span class="p"><span class="pre">[</span></span><span class="pre">arq.arq.arq.AggregateSchemeOutputType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.TokenInputType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.arq.ResolveOutputType</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#arq.arq.ARQ.aggregate_scheme" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.ARQ.generate_key">
+<span class="sig-name descname"><span class="pre">generate_key</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arq.arq.ARQ.generate_key" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a key for use in <a class="reference internal" href="#arq.arq.ARQ.setup" title="arq.arq.ARQ.setup"><code class="xref py py-func docutils literal notranslate"><span class="pre">setup()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a key</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.ARQ.setup">
+<span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arq.arq.table.Table" title="arq.arq.table.Table"><span class="pre">Table</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arq.arq.ARQ.setup" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a new encrypted range aggregate index over the given
+<a class="reference internal" href="#arq.arq.Table" title="arq.arq.Table"><code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code></a> with the given <a class="reference internal" href="#arq.arq.ARQ.setup.params.key" title="arq.arq.ARQ.setup"><code class="xref py py-paramref docutils literal notranslate"><span class="pre">key</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arq.arq.ARQ.setup.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arq.arq.ARQ.setup.params.key">¶</a> – the key to encrypt with</p></li>
+<li><p><span class="target" id="arq.arq.ARQ.setup.params.table"></span><strong>table</strong><a class="paramlink headerlink reference internal" href="#arq.arq.ARQ.setup.params.table">¶</a> – the <a class="reference internal" href="#arq.arq.Table" title="arq.arq.Table"><code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code></a> to compute the encrypted index over</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the serialized encrypted index</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.ARQ.load_eds">
+<span class="sig-name descname"><span class="pre">load_eds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eds_serialized</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">arq.arq.arq.EdsType</span></span></span><a class="headerlink" href="#arq.arq.ARQ.load_eds" title="Permalink to this definition"></a></dt>
+<dd><p>Deserializes the given encrypted data structure that was previously
+generated by <a class="reference internal" href="#arq.arq.ARQ.setup" title="arq.arq.ARQ.setup"><code class="xref py py-func docutils literal notranslate"><span class="pre">setup()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arq.arq.ARQ.load_eds.params.eds_serialized"></span><strong>eds_serialized</strong><a class="paramlink headerlink reference internal" href="#arq.arq.ARQ.load_eds.params.eds_serialized">¶</a> – the serialized eds to load, as generated by
+<a class="reference internal" href="#arq.arq.ARQ.setup" title="arq.arq.ARQ.setup"><code class="xref py py-func docutils literal notranslate"><span class="pre">setup()</span></code></a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the deserialized encrypted data structure</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.ARQ.query_server">
+<span class="sig-name descname"><span class="pre">query_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_tokens</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arq.arq.arq.EdsType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arq.arq.ARQ.query_server" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.ARQ.query">
+<span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arq.arq.domain.Domain" title="arq.arq.domain.Domain"><span class="pre">Domain</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arq.arq.range_query.RangeQuery" title="arq.arq.range_query.RangeQuery"><span class="pre">RangeQuery</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">eds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">arq.arq.arq.EdsType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arq.arq.ARQ.query" title="Permalink to this definition"></a></dt>
+<dd><p>Queries the given encrypted data structure with the given query.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="arq.arq.Domain">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Domain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arq.arq.Domain" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents the range of queryable values in a <a class="reference internal" href="#arq.arq.Table" title="arq.arq.Table"><code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code></a>.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arq.arq.Domain.start">
+<span class="sig-name descname"><span class="pre">start</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#arq.arq.Domain.start" title="Permalink to this definition"></a></dt>
+<dd><p>Start of the domain (inclusive).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arq.arq.Domain.end">
+<span class="sig-name descname"><span class="pre">end</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#arq.arq.Domain.end" title="Permalink to this definition"></a></dt>
+<dd><p>End of the domain (exclusive).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.Domain.size">
+<span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#arq.arq.Domain.size" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the number of possible domain values. In other words,
+size = end - start.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the size of the <a class="reference internal" href="#arq.arq.Domain" title="arq.arq.Domain"><code class="xref py py-class docutils literal notranslate"><span class="pre">Domain</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="arq.arq.RangeQuery">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RangeQuery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arq.arq.RangeQuery" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a range query.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arq.arq.RangeQuery.start">
+<span class="sig-name descname"><span class="pre">start</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#arq.arq.RangeQuery.start" title="Permalink to this definition"></a></dt>
+<dd><p>Start of the range (inclusive).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arq.arq.RangeQuery.end">
+<span class="sig-name descname"><span class="pre">end</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#arq.arq.RangeQuery.end" title="Permalink to this definition"></a></dt>
+<dd><p>End of the range (exclusive).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.RangeQuery.length">
+<span class="sig-name descname"><span class="pre">length</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#arq.arq.RangeQuery.length" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the number of domain values contained within the query. In
+other words, length = end - start.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the length of the <a class="reference internal" href="#arq.arq.RangeQuery" title="arq.arq.RangeQuery"><code class="xref py py-class docutils literal notranslate"><span class="pre">RangeQuery</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.RangeQuery.enumerate_all">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">enumerate_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arq.arq.domain.Domain" title="arq.arq.domain.Domain"><span class="pre">Domain</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#arq.arq.range_query.RangeQuery" title="arq.arq.range_query.RangeQuery"><span class="pre">RangeQuery</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arq.arq.RangeQuery.enumerate_all" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="arq.arq.Table">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arq.arq.domain.Domain" title="arq.arq.domain.Domain"><span class="pre">Domain</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arq.arq.Table" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a collection of records.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arq.arq.Table.entries">
+<span class="sig-name descname"><span class="pre">entries</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#arq.arq.Table.entries" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="arq.arq.Table.domain">
+<span class="sig-name descname"><span class="pre">domain</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#arq.arq.domain.Domain" title="arq.arq.domain.Domain"><span class="pre">Domain</span></a></em><a class="headerlink" href="#arq.arq.Table.domain" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.Table.filter">
+<span class="sig-name descname"><span class="pre">filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arq.arq.Table.filter" title="Permalink to this definition"></a></dt>
+<dd><p>Returns all of the records with matching domain_value. The
+returned List is not in any defined order (only used to
+allow for duplicates).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arq.arq.Table.filter.params.domain_value"></span><strong>domain_value</strong><a class="paramlink headerlink reference internal" href="#arq.arq.Table.filter.params.domain_value">¶</a> – the domain value to filter for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a List of all records located at the particular domain_value</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.Table.filter_range">
+<span class="sig-name descname"><span class="pre">filter_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">range_query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arq.arq.range_query.RangeQuery" title="arq.arq.range_query.RangeQuery"><span class="pre">RangeQuery</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arq.arq.Table.filter_range" title="Permalink to this definition"></a></dt>
+<dd><p>Returns all of the records contained in the given range_query.
+The returned List is not in any defined order (only used to
+allow for duplicates).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arq.arq.Table.filter_range.params.range_query"></span><strong>range_query</strong><a class="paramlink headerlink reference internal" href="#arq.arq.Table.filter_range.params.range_query">¶</a> – the range to filter over</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a List of all records matching the filter</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.Table.iterate_over_unique_domain_points">
+<span class="sig-name descname"><span class="pre">iterate_over_unique_domain_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">disambiguator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arq.arq.Table.iterate_over_unique_domain_points" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.Table.make">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">make</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">records</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#arq.arq.table.Table" title="arq.arq.table.Table"><span class="pre">Table</span></a></span></span><a class="headerlink" href="#arq.arq.Table.make" title="Permalink to this definition"></a></dt>
+<dd><p>Makes a table from the records in the given iterator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="arq.arq.Table.make.params.records"></span><strong>records</strong><a class="paramlink headerlink reference internal" href="#arq.arq.Table.make.params.records">¶</a> – the records to generate the <a class="reference internal" href="#arq.arq.Table" title="arq.arq.Table"><code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code></a> from</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a new <a class="reference internal" href="#arq.arq.Table" title="arq.arq.Table"><code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.Table.make_from_list">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">make_from_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">records</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#arq.arq.table.Table" title="arq.arq.table.Table"><span class="pre">Table</span></a></span></span><a class="headerlink" href="#arq.arq.Table.make_from_list" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="arq.arq.RangeAggregateScheme">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RangeAggregateScheme</span></span><a class="headerlink" href="#arq.arq.RangeAggregateScheme" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">arq.arq.range_aggregate_scheme.DSType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arq.arq.range_aggregate_scheme.DSQueryType</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">arq.arq.range_aggregate_scheme.DSResponseType</span></code>]</p>
+<p>Interface corresponding to the plaintext aggregate range query scheme
+syntax <span class="math notranslate nohighlight">\((\mathbb{S}, \mathbb{Q}, \mathbb{R})\)</span> defined in [EMT22].</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.RangeAggregateScheme.setup">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arq.arq.table.Table" title="arq.arq.table.Table"><span class="pre">Table</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">arq.arq.range_aggregate_scheme.DSType</span></span></span><a class="headerlink" href="#arq.arq.RangeAggregateScheme.setup" title="Permalink to this definition"></a></dt>
+<dd><p>Corresponds to the <span class="math notranslate nohighlight">\(\mathbb{S}\)</span> algorithm.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arq.arq.RangeAggregateScheme.generate_querier">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">generate_querier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arq.arq.domain.Domain" title="arq.arq.domain.Domain"><span class="pre">Domain</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#arq.arq.range_query.RangeQuery" title="arq.arq.range_query.RangeQuery"><span class="pre">RangeQuery</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#arq.arq.range_aggregate_querier.RangeAggregateQuerier" title="arq.arq.range_aggregate_querier.RangeAggregateQuerier"><span class="pre">RangeAggregateQuerier</span></a><span class="p"><span class="pre">[</span></span><span class="pre">arq.arq.range_aggregate_scheme.DSQueryType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">arq.arq.range_aggregate_scheme.DSResponseType</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#arq.arq.RangeAggregateScheme.generate_querier" title="Permalink to this definition"></a></dt>
+<dd><p>Corresponds to the <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> algorithm.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="arq.html" class="btn btn-neutral float-left" title="arq package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="arq.arq.plaintext_schemes.html" class="btn btn-neutral float-right" title="arq.arq.plaintext_schemes package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Zachary Espiritu.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

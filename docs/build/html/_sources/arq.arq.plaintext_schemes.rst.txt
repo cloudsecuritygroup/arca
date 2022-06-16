@@ -1,0 +1,21 @@
+arq.arq.plaintext\_schemes package
+==================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   arq.arq.plaintext_schemes.median
+   arq.arq.plaintext_schemes.minimum
+   arq.arq.plaintext_schemes.mode
+   arq.arq.plaintext_schemes.sum
+
+Module contents
+---------------
+
+.. automodule:: arq.arq.plaintext_schemes
+   :members:
+   :undoc-members:
+   :show-inheritance:

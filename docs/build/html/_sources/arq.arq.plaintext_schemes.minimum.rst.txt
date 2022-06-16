@@ -1,0 +1,29 @@
+arq.arq.plaintext\_schemes.minimum package
+==========================================
+
+Submodules
+----------
+
+arq.arq.plaintext\_schemes.minimum.minimum\_linear\_emt module
+--------------------------------------------------------------
+
+.. automodule:: arq.arq.plaintext_schemes.minimum.minimum_linear_emt
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+arq.arq.plaintext\_schemes.minimum.minimum\_sparse\_table module
+----------------------------------------------------------------
+
+.. automodule:: arq.arq.plaintext_schemes.minimum.minimum_sparse_table
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: arq.arq.plaintext_schemes.minimum
+   :members:
+   :undoc-members:
+   :show-inheritance:

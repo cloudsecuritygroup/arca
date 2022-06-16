@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>arca.ste.symmetric_encryption package &mdash; Arca 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_paramlinks.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="arca.util package" href="arca.util.html" />
+    <link rel="prev" title="arca.ste.serializers package" href="arca.ste.serializers.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Arca
+          </a>
+              <div class="version">
+                Version 0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">arca</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="arca.html">arca package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="arca.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="arca.arq.html">arca.arq package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="arca.ste.html">arca.ste package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arca.util.html">arca.util package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arca.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arca.html#arca-crypto-module">arca.crypto module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arca.html#module-arca">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Arca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">arca</a> &raquo;</li>
+          <li><a href="arca.html">arca package</a> &raquo;</li>
+          <li><a href="arca.ste.html">arca.ste package</a> &raquo;</li>
+      <li>arca.ste.symmetric_encryption package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/arca.ste.symmetric_encryption.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="arca-ste-symmetric-encryption-package">
+<h1>arca.ste.symmetric_encryption package<a class="headerlink" href="#arca-ste-symmetric-encryption-package" title="Permalink to this headline"></a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="arca-ste-symmetric-encryption-aes-symmetric-encryption-scheme-module">
+<h2>arca.ste.symmetric_encryption.aes_symmetric_encryption_scheme module<a class="headerlink" href="#arca-ste-symmetric-encryption-aes-symmetric-encryption-scheme-module" title="Permalink to this headline"></a></h2>
+<span class="target" id="module-arca.ste.symmetric_encryption.aes_symmetric_encryption_scheme"></span><dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.symmetric_encryption.aes_symmetric_encryption_scheme.AesSymmetricEncryptionScheme">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AesSymmetricEncryptionScheme</span></span><a class="headerlink" href="#arca.ste.symmetric_encryption.aes_symmetric_encryption_scheme.AesSymmetricEncryptionScheme" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme" title="arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme"><code class="xref py py-class docutils literal notranslate"><span class="pre">arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme</span></code></a></p>
+<p>A symmetric encryption scheme based on AES. Implements the
+<code class="xref py py-class docutils literal notranslate"><span class="pre">SymmetricEncryptionScheme</span></code> interface.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.symmetric_encryption.aes_symmetric_encryption_scheme.AesSymmetricEncryptionScheme.encrypt">
+<span class="sig-name descname"><span class="pre">encrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plaintext</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.symmetric_encryption.aes_symmetric_encryption_scheme.AesSymmetricEncryptionScheme.encrypt" title="Permalink to this definition"></a></dt>
+<dd><p>Encrypts a plaintext bytestring with the given key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.symmetric_encryption.aes_symmetric_encryption_scheme.AesSymmetricEncryptionScheme.encrypt.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.aes_symmetric_encryption_scheme.AesSymmetricEncryptionScheme.encrypt.params.key">¶</a> – the key to encrypt with</p></li>
+<li><p><span class="target" id="arca.ste.symmetric_encryption.aes_symmetric_encryption_scheme.AesSymmetricEncryptionScheme.encrypt.params.plaintext"></span><strong>plaintext</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.aes_symmetric_encryption_scheme.AesSymmetricEncryptionScheme.encrypt.params.plaintext">¶</a> – the plaintext to encrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the ciphertext</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.symmetric_encryption.aes_symmetric_encryption_scheme.AesSymmetricEncryptionScheme.decrypt">
+<span class="sig-name descname"><span class="pre">decrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ciphertext</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.symmetric_encryption.aes_symmetric_encryption_scheme.AesSymmetricEncryptionScheme.decrypt" title="Permalink to this definition"></a></dt>
+<dd><p>Decrypts a ciphertext previously encrypted with the given key in
+a call to <a class="reference internal" href="#arca.ste.symmetric_encryption.aes_symmetric_encryption_scheme.AesSymmetricEncryptionScheme.encrypt" title="arca.ste.symmetric_encryption.aes_symmetric_encryption_scheme.AesSymmetricEncryptionScheme.encrypt"><code class="xref py py-func docutils literal notranslate"><span class="pre">encrypt()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.symmetric_encryption.aes_symmetric_encryption_scheme.AesSymmetricEncryptionScheme.decrypt.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.aes_symmetric_encryption_scheme.AesSymmetricEncryptionScheme.decrypt.params.key">¶</a> – the key to decrypt with</p></li>
+<li><p><span class="target" id="arca.ste.symmetric_encryption.aes_symmetric_encryption_scheme.AesSymmetricEncryptionScheme.decrypt.params.ciphertext"></span><strong>ciphertext</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.aes_symmetric_encryption_scheme.AesSymmetricEncryptionScheme.decrypt.params.ciphertext">¶</a> – the ciphertext to decrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>bytes representing a key</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arca-ste-symmetric-encryption-simple-symmetric-encryption-scheme-module">
+<h2>arca.ste.symmetric_encryption.simple_symmetric_encryption_scheme module<a class="headerlink" href="#arca-ste-symmetric-encryption-simple-symmetric-encryption-scheme-module" title="Permalink to this headline"></a></h2>
+<span class="target" id="module-arca.ste.symmetric_encryption.simple_symmetric_encryption_scheme"></span><dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.symmetric_encryption.simple_symmetric_encryption_scheme.SimpleSymmetricEncryptionScheme">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SimpleSymmetricEncryptionScheme</span></span><a class="headerlink" href="#arca.ste.symmetric_encryption.simple_symmetric_encryption_scheme.SimpleSymmetricEncryptionScheme" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme" title="arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme"><code class="xref py py-class docutils literal notranslate"><span class="pre">arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme</span></code></a></p>
+<p>A simple symmetric encryption scheme using primitives from the
+simple crypto module. Implements the <code class="xref py py-class docutils literal notranslate"><span class="pre">SymmetricEncryptionScheme</span></code>
+interface.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.symmetric_encryption.simple_symmetric_encryption_scheme.SimpleSymmetricEncryptionScheme.encrypt">
+<span class="sig-name descname"><span class="pre">encrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plaintext</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.symmetric_encryption.simple_symmetric_encryption_scheme.SimpleSymmetricEncryptionScheme.encrypt" title="Permalink to this definition"></a></dt>
+<dd><p>Encrypts a plaintext bytestring with the given key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.symmetric_encryption.simple_symmetric_encryption_scheme.SimpleSymmetricEncryptionScheme.encrypt.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.simple_symmetric_encryption_scheme.SimpleSymmetricEncryptionScheme.encrypt.params.key">¶</a> – the key to encrypt with</p></li>
+<li><p><span class="target" id="arca.ste.symmetric_encryption.simple_symmetric_encryption_scheme.SimpleSymmetricEncryptionScheme.encrypt.params.plaintext"></span><strong>plaintext</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.simple_symmetric_encryption_scheme.SimpleSymmetricEncryptionScheme.encrypt.params.plaintext">¶</a> – the plaintext to encrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the ciphertext</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.symmetric_encryption.simple_symmetric_encryption_scheme.SimpleSymmetricEncryptionScheme.decrypt">
+<span class="sig-name descname"><span class="pre">decrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ciphertext</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.symmetric_encryption.simple_symmetric_encryption_scheme.SimpleSymmetricEncryptionScheme.decrypt" title="Permalink to this definition"></a></dt>
+<dd><p>Decrypts a ciphertext previously encrypted with the given key in
+a call to <a class="reference internal" href="#arca.ste.symmetric_encryption.simple_symmetric_encryption_scheme.SimpleSymmetricEncryptionScheme.encrypt" title="arca.ste.symmetric_encryption.simple_symmetric_encryption_scheme.SimpleSymmetricEncryptionScheme.encrypt"><code class="xref py py-func docutils literal notranslate"><span class="pre">encrypt()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.symmetric_encryption.simple_symmetric_encryption_scheme.SimpleSymmetricEncryptionScheme.decrypt.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.simple_symmetric_encryption_scheme.SimpleSymmetricEncryptionScheme.decrypt.params.key">¶</a> – the key to decrypt with</p></li>
+<li><p><span class="target" id="arca.ste.symmetric_encryption.simple_symmetric_encryption_scheme.SimpleSymmetricEncryptionScheme.decrypt.params.ciphertext"></span><strong>ciphertext</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.simple_symmetric_encryption_scheme.SimpleSymmetricEncryptionScheme.decrypt.params.ciphertext">¶</a> – the ciphertext to decrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>bytes representing a key</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="arca-ste-symmetric-encryption-symmetric-encryption-scheme-module">
+<h2>arca.ste.symmetric_encryption.symmetric_encryption_scheme module<a class="headerlink" href="#arca-ste-symmetric-encryption-symmetric-encryption-scheme-module" title="Permalink to this headline"></a></h2>
+<span class="target" id="module-arca.ste.symmetric_encryption.symmetric_encryption_scheme"></span><dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SymmetricEncryptionScheme</span></span><a class="headerlink" href="#arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>A <a class="reference internal" href="#arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme" title="arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme"><code class="xref py py-class docutils literal notranslate"><span class="pre">SymmetricEncryptionScheme</span></code></a> is a interface used to
+pass specific symmetric encryption schemes to other cryptographic
+objects, such as an <code class="xref py py-class docutils literal notranslate"><span class="pre">EncryptedMultimapScheme</span></code>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme.encrypt">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plaintext</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme.encrypt" title="Permalink to this definition"></a></dt>
+<dd><p>Encrypts a plaintext bytestring with the given key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme.encrypt.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme.encrypt.params.key">¶</a> – the key to encrypt with</p></li>
+<li><p><span class="target" id="arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme.encrypt.params.plaintext"></span><strong>plaintext</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme.encrypt.params.plaintext">¶</a> – the plaintext to encrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the ciphertext</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme.decrypt">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">decrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plaintext</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme.decrypt" title="Permalink to this definition"></a></dt>
+<dd><p>Decrypts a ciphertext previously encrypted with the given key in
+a call to <a class="reference internal" href="#arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme.encrypt" title="arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme.encrypt"><code class="xref py py-func docutils literal notranslate"><span class="pre">encrypt()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme.decrypt.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme.decrypt.params.key">¶</a> – the key to decrypt with</p></li>
+<li><p><span class="target" id="arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme.decrypt.params.ciphertext"></span><strong>ciphertext</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme.decrypt.params.ciphertext">¶</a> – the ciphertext to decrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>bytes representing a key</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-arca.ste.symmetric_encryption">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-arca.ste.symmetric_encryption" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.symmetric_encryption.SymmetricEncryptionScheme">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SymmetricEncryptionScheme</span></span><a class="headerlink" href="#arca.ste.symmetric_encryption.SymmetricEncryptionScheme" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>A <a class="reference internal" href="#arca.ste.symmetric_encryption.SymmetricEncryptionScheme" title="arca.ste.symmetric_encryption.SymmetricEncryptionScheme"><code class="xref py py-class docutils literal notranslate"><span class="pre">SymmetricEncryptionScheme</span></code></a> is a interface used to
+pass specific symmetric encryption schemes to other cryptographic
+objects, such as an <code class="xref py py-class docutils literal notranslate"><span class="pre">EncryptedMultimapScheme</span></code>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.symmetric_encryption.SymmetricEncryptionScheme.encrypt">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plaintext</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.symmetric_encryption.SymmetricEncryptionScheme.encrypt" title="Permalink to this definition"></a></dt>
+<dd><p>Encrypts a plaintext bytestring with the given key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.symmetric_encryption.SymmetricEncryptionScheme.encrypt.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.SymmetricEncryptionScheme.encrypt.params.key">¶</a> – the key to encrypt with</p></li>
+<li><p><span class="target" id="arca.ste.symmetric_encryption.SymmetricEncryptionScheme.encrypt.params.plaintext"></span><strong>plaintext</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.SymmetricEncryptionScheme.encrypt.params.plaintext">¶</a> – the plaintext to encrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the ciphertext</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.symmetric_encryption.SymmetricEncryptionScheme.decrypt">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">decrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plaintext</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.symmetric_encryption.SymmetricEncryptionScheme.decrypt" title="Permalink to this definition"></a></dt>
+<dd><p>Decrypts a ciphertext previously encrypted with the given key in
+a call to <a class="reference internal" href="#arca.ste.symmetric_encryption.SymmetricEncryptionScheme.encrypt" title="arca.ste.symmetric_encryption.SymmetricEncryptionScheme.encrypt"><code class="xref py py-func docutils literal notranslate"><span class="pre">encrypt()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.symmetric_encryption.SymmetricEncryptionScheme.decrypt.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.SymmetricEncryptionScheme.decrypt.params.key">¶</a> – the key to decrypt with</p></li>
+<li><p><span class="target" id="arca.ste.symmetric_encryption.SymmetricEncryptionScheme.decrypt.params.ciphertext"></span><strong>ciphertext</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.SymmetricEncryptionScheme.decrypt.params.ciphertext">¶</a> – the ciphertext to decrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>bytes representing a key</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.symmetric_encryption.SimpleSymmetricEncryptionScheme">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SimpleSymmetricEncryptionScheme</span></span><a class="headerlink" href="#arca.ste.symmetric_encryption.SimpleSymmetricEncryptionScheme" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme" title="arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme"><code class="xref py py-class docutils literal notranslate"><span class="pre">arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme</span></code></a></p>
+<p>A simple symmetric encryption scheme using primitives from the
+simple crypto module. Implements the <a class="reference internal" href="#arca.ste.symmetric_encryption.SymmetricEncryptionScheme" title="arca.ste.symmetric_encryption.SymmetricEncryptionScheme"><code class="xref py py-class docutils literal notranslate"><span class="pre">SymmetricEncryptionScheme</span></code></a>
+interface.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.symmetric_encryption.SimpleSymmetricEncryptionScheme.encrypt">
+<span class="sig-name descname"><span class="pre">encrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plaintext</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.symmetric_encryption.SimpleSymmetricEncryptionScheme.encrypt" title="Permalink to this definition"></a></dt>
+<dd><p>Encrypts a plaintext bytestring with the given key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.symmetric_encryption.SimpleSymmetricEncryptionScheme.encrypt.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.SimpleSymmetricEncryptionScheme.encrypt.params.key">¶</a> – the key to encrypt with</p></li>
+<li><p><span class="target" id="arca.ste.symmetric_encryption.SimpleSymmetricEncryptionScheme.encrypt.params.plaintext"></span><strong>plaintext</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.SimpleSymmetricEncryptionScheme.encrypt.params.plaintext">¶</a> – the plaintext to encrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the ciphertext</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.symmetric_encryption.SimpleSymmetricEncryptionScheme.decrypt">
+<span class="sig-name descname"><span class="pre">decrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ciphertext</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.symmetric_encryption.SimpleSymmetricEncryptionScheme.decrypt" title="Permalink to this definition"></a></dt>
+<dd><p>Decrypts a ciphertext previously encrypted with the given key in
+a call to <a class="reference internal" href="#arca.ste.symmetric_encryption.SimpleSymmetricEncryptionScheme.encrypt" title="arca.ste.symmetric_encryption.SimpleSymmetricEncryptionScheme.encrypt"><code class="xref py py-func docutils literal notranslate"><span class="pre">encrypt()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.symmetric_encryption.SimpleSymmetricEncryptionScheme.decrypt.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.SimpleSymmetricEncryptionScheme.decrypt.params.key">¶</a> – the key to decrypt with</p></li>
+<li><p><span class="target" id="arca.ste.symmetric_encryption.SimpleSymmetricEncryptionScheme.decrypt.params.ciphertext"></span><strong>ciphertext</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.SimpleSymmetricEncryptionScheme.decrypt.params.ciphertext">¶</a> – the ciphertext to decrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>bytes representing a key</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="arca.ste.symmetric_encryption.AesSymmetricEncryptionScheme">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AesSymmetricEncryptionScheme</span></span><a class="headerlink" href="#arca.ste.symmetric_encryption.AesSymmetricEncryptionScheme" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme" title="arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme"><code class="xref py py-class docutils literal notranslate"><span class="pre">arca.ste.symmetric_encryption.symmetric_encryption_scheme.SymmetricEncryptionScheme</span></code></a></p>
+<p>A symmetric encryption scheme based on AES. Implements the
+<a class="reference internal" href="#arca.ste.symmetric_encryption.SymmetricEncryptionScheme" title="arca.ste.symmetric_encryption.SymmetricEncryptionScheme"><code class="xref py py-class docutils literal notranslate"><span class="pre">SymmetricEncryptionScheme</span></code></a> interface.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.symmetric_encryption.AesSymmetricEncryptionScheme.encrypt">
+<span class="sig-name descname"><span class="pre">encrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plaintext</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.symmetric_encryption.AesSymmetricEncryptionScheme.encrypt" title="Permalink to this definition"></a></dt>
+<dd><p>Encrypts a plaintext bytestring with the given key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.symmetric_encryption.AesSymmetricEncryptionScheme.encrypt.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.AesSymmetricEncryptionScheme.encrypt.params.key">¶</a> – the key to encrypt with</p></li>
+<li><p><span class="target" id="arca.ste.symmetric_encryption.AesSymmetricEncryptionScheme.encrypt.params.plaintext"></span><strong>plaintext</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.AesSymmetricEncryptionScheme.encrypt.params.plaintext">¶</a> – the plaintext to encrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the ciphertext</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="arca.ste.symmetric_encryption.AesSymmetricEncryptionScheme.decrypt">
+<span class="sig-name descname"><span class="pre">decrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ciphertext</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#arca.ste.symmetric_encryption.AesSymmetricEncryptionScheme.decrypt" title="Permalink to this definition"></a></dt>
+<dd><p>Decrypts a ciphertext previously encrypted with the given key in
+a call to <a class="reference internal" href="#arca.ste.symmetric_encryption.AesSymmetricEncryptionScheme.encrypt" title="arca.ste.symmetric_encryption.AesSymmetricEncryptionScheme.encrypt"><code class="xref py py-func docutils literal notranslate"><span class="pre">encrypt()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="arca.ste.symmetric_encryption.AesSymmetricEncryptionScheme.decrypt.params.key"></span><strong>key</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.AesSymmetricEncryptionScheme.decrypt.params.key">¶</a> – the key to decrypt with</p></li>
+<li><p><span class="target" id="arca.ste.symmetric_encryption.AesSymmetricEncryptionScheme.decrypt.params.ciphertext"></span><strong>ciphertext</strong><a class="paramlink headerlink reference internal" href="#arca.ste.symmetric_encryption.AesSymmetricEncryptionScheme.decrypt.params.ciphertext">¶</a> – the ciphertext to decrypt</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>bytes representing a key</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="arca.ste.serializers.html" class="btn btn-neutral float-left" title="arca.ste.serializers package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="arca.util.html" class="btn btn-neutral float-right" title="arca.util package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Zachary Espiritu.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

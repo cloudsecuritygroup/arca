@@ -1,0 +1,8 @@
+[build-system]
+requires = [
+    "types-cryptography>=3.3.19",
+    "cryptography>=36.0.1",
+    "types-cryptography",
+    "setuptools",
+]
+build-backend = "setuptools.build_meta"

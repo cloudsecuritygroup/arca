@@ -1,0 +1,21 @@
+arq.arq.plaintext\_schemes.mode package
+=======================================
+
+Submodules
+----------
+
+arq.arq.plaintext\_schemes.mode.mode\_as\_table module
+------------------------------------------------------
+
+.. automodule:: arq.arq.plaintext_schemes.mode.mode_as_table
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: arq.arq.plaintext_schemes.mode
+   :members:
+   :undoc-members:
+   :show-inheritance:

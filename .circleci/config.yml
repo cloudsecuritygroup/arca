@@ -1,0 +1,57 @@
+version: 2.1
+
+orbs:
+  python: circleci/python@1.5.0
+
+jobs:
+  lint:
+    docker:
+      - image: cimg/python:3.10.2
+    resource_class: small
+    steps:
+      - checkout
+      - python/install-packages:
+          pkg-manager: pip
+      - run:
+          name: Check code formatting
+          command: black --check --target-version py310 src tests
+      - run:
+          name: Check for unused imports
+          command: autoflake --recursive --in-place --remove-unused-variables --check src tests
+  type-check:
+    docker:
+      - image: cimg/python:3.10.2
+    resource_class: small
+    steps:
+      - checkout
+      - python/install-packages:
+          pkg-manager: pip
+      - run:
+          name: Check types
+          command: mypy --strict src
+  test:
+    docker:
+      - image: cimg/python:3.10.2
+    resource_class: small
+    steps:
+      - checkout
+      - python/install-packages:
+          pkg-manager: pip
+      - run:
+          name: Install arca
+          command: pip install -e .
+      - run:
+          name: Run tests
+          command: pytest tests
+
+# Invoke jobs via workflows
+# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+workflows:
+  check-and-test:
+    jobs:
+      - lint
+      - type-check
+      - test:
+          requires:
+            - type-check
+            - lint

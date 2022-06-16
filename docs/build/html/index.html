@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arca: a collection of encrypted search algorithms &mdash; Arca 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx_paramlinks.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="arca" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> Arca
+          </a>
+              <div class="version">
+                Version 0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">arca</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Arca</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>Arca: a collection of encrypted search algorithms</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="arca-a-collection-of-encrypted-search-algorithms">
+<h1>Arca: a collection of encrypted search algorithms<a class="headerlink" href="#arca-a-collection-of-encrypted-search-algorithms" title="Permalink to this headline"></a></h1>
+<p><strong>Arca</strong> is an Python
+package designed to allow researchers to easily and rapidly prototype systems that use encrypted
+search algorithms. Originally written by Zachary Espiritu for internal use in the Cloud Security Group at Brown University, Arca provides simple cryptographic primitives (which themselves are based on those
+provided by the Python cryptography package) and implementations of various structured
+encryption schemes.</p>
+<p>Arca’s provided encrypted search algorithms allow researchers to easily swap out different encryption subroutines and serialization algorithms for more fine-tuned experimentation; conversely, they come with reasonable pre-defined defaults if you just want to start immediately working with the structures.</p>
+<p>Arca has complete type annotations and passes all strict static type checks provided by the <a class="reference external" href="http://mypy-lang.org/">MyPy</a> type checker.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Arca</strong> is provided as-is for easy-to-use, rapid prototyping and
+research. Several portions of this library implement cryptographic
+primitives that have not been reviewed by a third-party and are not
+recommended for use in a production environment.</p>
+</div>
+<div class="section" id="implementations">
+<h2>Implementations<a class="headerlink" href="#implementations" title="Permalink to this headline"></a></h2>
+<p>Several different classes of encrypted search algorithms have been implemented in the Arca library:</p>
+<ul>
+<li><p><strong>Encrypted multimaps.</strong> Arca provides several implementations of encrypted multimap schemes in the <code class="docutils literal notranslate"><span class="pre">arca.ste.emm</span></code> module:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="arca.ste.emm.html#arca.ste.emm.PiBaseEMM" title="arca.ste.emm.PiBaseEMM"><code class="xref py py-class docutils literal notranslate"><span class="pre">PiBaseEMM</span></code></a>, based on <span class="math notranslate nohighlight">\(\Pi_\mathrm{bas}\)</span> from [<a class="reference external" href="https://eprint.iacr.org/2014/853.pdf">CJJJKRS14</a>]</p></li>
+<li><p><a class="reference internal" href="arca.ste.emm.html#arca.ste.emm.Pi2LevEMM" title="arca.ste.emm.Pi2LevEMM"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pi2LevEMM</span></code></a>, based on <span class="math notranslate nohighlight">\(\Pi_\mathrm{2lev}\)</span> from [<a class="reference external" href="https://eprint.iacr.org/2014/853.pdf">CJJJKRS14</a>]</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Encrypted dictionaries.</strong> Arca provides a simple encrypted dictionary scheme in the in the <code class="docutils literal notranslate"><span class="pre">arca.ste.edx</span></code> module:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="arca.ste.edx.html#arca.ste.edx.SimpleEDX" title="arca.ste.edx.SimpleEDX"><code class="xref py py-class docutils literal notranslate"><span class="pre">SimpleEDX</span></code></a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Encrypted aggregate range query indexes.</strong> Arca provides several encrypted indexes for aggregate range queries via an implementation of the <strong>ARQ</strong> framework from [<a class="reference external" href="#">EMT22</a>]. Using <strong>ARQ</strong>, structures from the plaintext data management community may be easily unified with existing <em>structured encryption</em> primitives to produce schemes with provable leakage profiles and security guarantees. The following schemes are provided in the <code class="docutils literal notranslate"><span class="pre">arca.arq</span></code> module:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>ARQ-LinearMin</strong> [[EMT22][EMT22]]</p></li>
+<li><p><strong>ARQ-1/2-ApproxMode</strong> [[EMT22][EMT22]]</p></li>
+<li><p><strong>ARQ-alpha-ApproxMedian</strong> [[EMT22][EMT22]]</p></li>
+<li><p><strong>DPPDGP-Sum</strong> [[DPPDGP18][DPPDGP18]]</p></li>
+<li><p><strong>DPPDGP-Min1</strong> [[DPPDGP18][DPPDGP18]]</p></li>
+<li><p><strong>DPPDGP-Min2</strong> [[DPPDGP18][DPPDGP18]]</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Encrypted range structures.</strong> Arca provides several implementations of <em>record-reporting</em> encrypted range structures (meaning that the index returns the set of records that fall in the queried range) for variable domain dimensions. The following schemes are provided in the <code class="docutils literal notranslate"><span class="pre">arca.erq</span></code> module:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>ERMD-Linear</strong> [FMET22]</p></li>
+<li><p><strong>ERMD-Quadratic</strong> [FMET22]</p></li>
+<li><p><strong>ERMD-LogTree</strong> [FMET22]</p></li>
+<li><p><strong>ERMD-QuadTree</strong> [FMET22]</p></li>
+<li><p><strong>DPPDGP-Linear</strong> [DPPDGP16]</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>ARQ</strong> is an easy-to-use Python library for creating cryptographic schemes
+that handle aggregate range queries (sum, minimum, median, and mode) over
+encrypted datasets.</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">arca</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arca.html">arca package</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline"></a></h2>
+<p>The vast majority of tests in Arca rely on <a class="reference external" href="https://hypothesis.works/">Hypothesis</a> for property-based testing. Our Hypothesis-based tests define a particular property that we expect our code to have. Then, Hypothesis generates arbitrary data matching a particular specification and checks to see if the generated data breaks our defined property.</p>
+<p>We find that Hypothesis works really well for our library since Arca implements many algorithms that follow a “round-trip” process: they consume an initial input, transform it in some way (i.e. encrypt it), and then undo that transformation (i.e. decrypt it).</p>
+</div>
+<div class="section" id="citing">
+<h2>Citing<a class="headerlink" href="#citing" title="Permalink to this headline"></a></h2>
+<p>If you use this library (and/or its associated documentation) in your research work,
+please cite the following paper:</p>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@misc</span><span class="p">{</span><span class="nl">Espiritu2022</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Zachary Espiritu and</span>
+<span class="s">              Evangelia Anna Markatou and</span>
+<span class="s">              Roberto Tamassia}</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="na">title</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="s">{Time- and Space-Efficient Aggregate Range Queries on Encrypted Databases}</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="na">year</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="s">{2022}</span><span class="p">,</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>If you want a citation specifically to our software, you can use the following citations (but we
+request that you still cite the above paper):</p>
+<div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@software</span><span class="p">{</span><span class="nl">Arca</span><span class="p">,</span><span class="w"></span>
+<span class="w">   </span><span class="na">author</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="s">{Zachary Espiritu}</span><span class="p">,</span><span class="w"></span>
+<span class="w">   </span><span class="na">license</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Apache-2.0}</span><span class="p">,</span><span class="w"></span>
+<span class="w">   </span><span class="na">title</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="s">{Arca}</span><span class="p">,</span><span class="w"></span>
+<span class="w">   </span><span class="na">url</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="s">{https://github.com/cloudsecuritygroup/arca}</span><span class="p">,</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline"></a></h2>
+<p>The Arca code base (e.g. on <a class="reference external" href="#">Github</a>) is licensed under the <a class="reference external" href="#">Apache License 2.0</a>.
+The Arca documentation (this site) is licensed under <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">CC-SA 4.0</a>. Unless otherwise stated, any source code examples embedded within the Arca documentation are licensed under <a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>.</p>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-right" title="arca" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Zachary Espiritu.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

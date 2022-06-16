@@ -1,0 +1,29 @@
+arq.ste.edx package
+===================
+
+Submodules
+----------
+
+arq.ste.edx.edx module
+----------------------
+
+.. automodule:: arq.ste.edx.edx
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+arq.ste.edx.simple\_edx module
+------------------------------
+
+.. automodule:: arq.ste.edx.simple_edx
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: arq.ste.edx
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+title: Arca
+message: 'If you use this software, please cite both the article from preferred-citation and the software itself.'
+abstract: 'Arca is a Python library for rapid development of systems that use encrypted search algorithms.'
+type: software
+authors:
+  - family-names: Espiritu
+    given-names: Zachary
+    orcid: 'https://orcid.org/0000-0003-2263-3784'
+    affiliation: Brown University
+    email: zespirit@cs.brown.edu
+repository-code: 'https://github.com/cloudsecuritygroup/arca'
+repository: 'https://github.com/cloudsecuritygroup/arca'
+url: 'https://github.com/cloudsecuritygroup/arca'
+license: Apache-2.0
+preferred-citation:
+  type: article
+  title: 'Time- and Space- Efficient Aggregate Range Queries on Encrypted Databases'
+  authors:
+    - family-names: Espiritu
+      given-names: Zachary
+      orcid: 'https://orcid.org/0000-0003-2263-3784'
+      affiliation: Brown University
+      email: zespirit@cs.brown.edu
+    - family-names: Markatou
+      given-names: Evangelia Anna
+      email: markatou@brown.edu
+    - family-names: Tamassia
+      given-names: Roberto
+      orcid: 'https://orcid.org/0000-0003-2445-6064'
+      email: roberto@tamassia.net
+  journal: "Proceedings of Privacy Enhancing Technologies"
+  issue: 2022.4
+  volume: 2022
+  year: 2022
